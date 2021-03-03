@@ -1,0 +1,6 @@
+<div class="categories">
+    <%= link_to 'Home', root_path %>
+    <% @categories.each do |category| %>
+      <%= link_to "#{category.name}", category_path(category) %>
+    <% end %>
+  </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_023828) do
+ActiveRecord::Schema.define(version: 2021_03_03_155350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2021_03_03_023828) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+  end
+
+  create_table "articles_categories", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "article_id"
+    t.integer "category_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -54,6 +61,8 @@ ActiveRecord::Schema.define(version: 2021_03_03_023828) do
   end
 
   add_foreign_key "articles", "users"
+  add_foreign_key "articles_categories", "articles"
+  add_foreign_key "articles_categories", "categories"
   add_foreign_key "votes", "articles"
   add_foreign_key "votes", "users"
 end

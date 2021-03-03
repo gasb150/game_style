@@ -1,5 +1,7 @@
 class Article < ApplicationRecord
     belongs_to :user
+    has_many :votes, dependent: :destroy
 
-    has_and_belongs_to_many :categories
+    has_many :articles_categories, dependent: :destroy
+    has_many :categories, through: :articles_categories
 end

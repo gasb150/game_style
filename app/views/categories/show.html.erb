@@ -1,0 +1,10 @@
+
+<% @articles_cat.each do |article|%>
+  <ul>
+    <img src="#{<%= article.image_url%>}">
+    <%= article.title %>
+    <%= article.text %>
+    <%= vote_unvote_btn(article) %>
+      <%= article.vote.count %>
+</ul>
+<% end %>
