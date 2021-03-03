@@ -4,15 +4,16 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-      <%= f.input :name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "name" }%>
-    <%= f.input :username,
-                required: true,
-                input_html: { autocomplete: "username" }%>
+  <%= f.input :name,
+  required: true,
+  autofocus: true,
+  input_html: { autocomplete: "name" }%>
+<%= f.input :username,
+  required: true,
+  input_html: { autocomplete: "username" }%>
     <%= f.input :email,
                 required: true,
+                autofocus: true,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
@@ -28,4 +29,4 @@
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<%= render "devise/shared/links" %>
