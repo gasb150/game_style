@@ -4,7 +4,7 @@
     <img src="#{<%= article.image_url%>}">
     <%= article.title %>
     <%= article.text %>
-    
+    <%= article.user.name %>
     <div> <%= vote_unvote_btn(article) %>
       <%= article.votes.count %>
       </div>

@@ -1,23 +1,28 @@
 class VotesController < ApplicationController
-    def create
-        @vote = current_user.likes.new(article_id: params[:article_id])
 
+    def create
+        @vote = current_user.votes.new(article_id: params[:article_id])
         if @vote.save
-            redirec_to article_path(:article_id), notice "You vote to #{@vote.article.title}"
+            redirect_to category_path(@vote.article), notice: "You vote to \"#{@vote.article.title}\" article"
         else
-            redirec_to article_path(:article_id), notice "Sorry you can't vote to #{@vote.article.title}"
+            redirect_to category_path(@vote.article), notice: "Sorry you can't vote to #{@vote.article.title}"
         end
     end
 
     def destroy
-        @vote = Vote.find_by
+        vote = Vote.find_by(article_id: params[:article_id], user_id: current_user.id)
+        if vote
+            article = vote.article.title
+            vote.destroy
+            redirect_to category_path(vote.article), notice: "You unvote to \"#{article}\" article"
+          else
+            redirect_to category_path(vote.article), alert: 'You cannot dislike post that you did not like before.'
+          end
     end
-
-
 
     private
 
-    def like_params
-        params.requiere(:vote).permit(id: params[:id], user: current_user, post_id: params[:post_id])
+    def vote_params
+        params.require(:vote).permit(:id, :article_id)
     end
 end
