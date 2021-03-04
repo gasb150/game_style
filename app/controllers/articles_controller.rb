@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles or /articles.json
   def index
     @articles = Article.all
+    
   end
 
   # GET /articles/1 or /articles/1.json
@@ -12,6 +13,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
+    @categories = Category.all.order(:id)
     @article = Article.new
   end
 
@@ -21,17 +23,20 @@ class ArticlesController < ApplicationController
 
   # POST /articles or /articles.json
   def create
-    @article = Article.new(article_params)
-
-    respond_to do |format|
+    
+    @article = current_user.articles.new(article_params, category_params, empty_params)
+    @category = Category.find_by(id: :category_ids)
+    respond_to do |format|      
       if @article.save
+          @article.categories << @category
         format.html { redirect_to @article, notice: "Article was successfully created." }
         format.json { render :show, status: :created, location: @article }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new, status: :unprocessable_entity, notice: "Article was not successfully created." }
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PATCH/PUT /articles/1 or /articles/1.json
@@ -66,4 +71,11 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :text, :image_url)
     end
+    def category_params
+      params[:product][:category_ids] ||= []
+    end
+    def empty_params
+      params[:product] ||= {}
+    end
+
 end

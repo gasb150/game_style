@@ -16,7 +16,7 @@
    <div>
   
   <% if current_user %>
-    <%= link_to "Welcome #{current_user.name}", user_path(current_user.id)%>
+    <%= link_to "Write new article #{current_user.username}", new_article_path%>
     <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
   <% else %>
     <%= link_to 'Sign in', user_session_path %>

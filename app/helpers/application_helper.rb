@@ -8,4 +8,7 @@ module ApplicationHelper
           link_to('Vote!', article_votes_path(article_id: article.id, user_id:current_user), method: :post)
         end
     end
+    def category_list(article, category)
+      link_to('acept', articles_categories_path(category_id: category.id, article_id: article.id), method: :create)
+    end
 end
