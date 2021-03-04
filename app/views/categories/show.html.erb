@@ -5,7 +5,9 @@
     <%= article.title %>
     <%= article.text %>
     <%= article.user.name %>
-    <div> <%= vote_unvote_btn(article) %>
+    <% category = @category %>
+    
+    <div> <%= vote_unvote_btn(article, @category.id) %>
       <%= article.votes.count %>
       </div>
 </ul>
