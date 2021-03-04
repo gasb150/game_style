@@ -8,12 +8,14 @@
     <%= f.input :text %>
     <%= f.input :image_url %>
   </div>
-
+ 
+  <div class="field">
+  <%= hidden_field_tag "article[category_ids][]", nil %>
   <% Category.all.each do |category| %>
-     <%= check_box_tag "articles[category_ids][]", category.id,
-     @article.category_ids.include?(category.id), id: dom_id(category) %>
-          <%= label_tag dom_id(category), category.name %><br>
-       <% end %>
+    <%= check_box_tag "article[category_ids][]", category.id, @article.category_ids.include?(category.id), id: dom_id(category) %>
+    <%= label_tag dom_id(category), category.name %><br>
+  <% end %>
+</div>
 
        <div class="form-actions">
     <%= f.button :submit %>
