@@ -5,7 +5,8 @@
 <% @categories_priory.each do |category| %>
     <ul style="border: 5px solid black">
     <% if !category.articles.first.nil? %>
-    <li>article img:  <img src="#{<%= category.articles.ordered_by_most_recent.first.image_url%>}"> </li> 
+    <%# cloudinary_url(category.articles.order_by_most_recent.first.image.key, options = {}) %>
+    <li>article img:  <img src="<%= cloudinary_url(category.articles.ordered_by_most_recent.first.image.key, options = {}) %>"> </li> 
     <li>article name:     <%= category.articles.ordered_by_most_recent.first.title %></li>
     <% end %>
      <li><%= link_to category.name, category_path(category) %></li></a>

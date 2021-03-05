@@ -12,7 +12,7 @@
 
 <p>
   <strong>Image url:</strong>
-  <%= @article.image_url %>
+  <%= cl_image_tag(@article.image.key, width: 200, crop: :scale) %>
 </p>
 
 

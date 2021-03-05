@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :text %>
-    <%= f.input :image_url %>
+    <%= f.file_field :image, class: 'form-control', direct_upload: true  %>
   </div>
  
   <div class="field">
