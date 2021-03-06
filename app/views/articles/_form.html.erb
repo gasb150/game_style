@@ -4,22 +4,22 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :text %>
-    <%= f.file_field :image, class: 'form-control', direct_upload: true  %>
+    <h2><%= f.input :title, class: 'article_title', placeholder: 'Yor title here' %></h2>
+    <h2><%= f.input :text, class:'article_text', placeholder: 'Write your article text...'%></h2>
+    <h2><%= f.file_field :image, class: 'form-control', direct_upload: true  %></h2>
   </div>
  
   <div class="field">
   <%= hidden_field_tag "article[category_ids][]", nil %>
-  <% Category.all.each do |category| %>
-    <%= check_box_tag "article[category_ids][]", category.id, @article.category_ids.include?(category.id), id: dom_id(category) %>
-    <%= label_tag dom_id(category), category.name %><br>
-  <% end %>
+  <div class="category_select">
+  <%= article_select %>
+  </div>
 </div>
 
        <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "button" %>
   </div>
 
       <% end %>
+
 

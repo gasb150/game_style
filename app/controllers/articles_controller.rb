@@ -5,9 +5,8 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.includes(:user).all
     
-    
   end
-
+ 
   # GET /articles/1 or /articles/1.json
   def show
     

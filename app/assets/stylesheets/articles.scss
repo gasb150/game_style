@@ -1,3 +1,65 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$primary-color-dark: #f46326;
+$primary-color: #f9a02e;
+$primary-color-light: #ffffff;
+$primary-color-text: #212121;
+$primary-color-attenuated: #736e69;
+
+.new_article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .form-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .input{
+        .string{
+            height: auto;
+            width: 30vw;
+            margin: 5%;
+        }
+        textarea[name="article[text]"]{
+            height: 30vw;
+            width: 60vw;
+            margin: 5%;
+        }
+        label[for=article_title]{
+           text-align: center;
+           align-items: center;
+           margin: auto;
+           color: $primary-color-light;
+        }
+    }
+    .article_title, .article_text{
+        display: flex;
+        flex-direction: column;
+
+        label[for=article_text]{
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            color: $primary-color-light;
+        }
+    }
+    .form-control{
+        color: $primary-color-light;
+    }
+  
+ 
+}
+.category_select{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40vw;
+    left: 4vw
+}
+.button{
+    background-color: $primary-color-dark;
+    border: $primary-color-dark 1px solid;
+}
+}
