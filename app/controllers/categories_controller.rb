@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
     def show
       show_category
         @category = Category.find(params[:id])
-        @articles_cat = Category.find(params[:id]).articles.ordered_by_most_recent
+        @articles_cat = Category.find(params[:id]).articles.includes(:user, image_attachment: :blob).ordered_by_most_recent
     end
 
     private

@@ -9,6 +9,7 @@ Rails.application.configure do
   # Bullet.growl         = true
     Bullet.rails_logger  = true
     Bullet.add_footer    = true
+    
   end
 
   # Settings specified here will take precedence over those in config/application.rb.
