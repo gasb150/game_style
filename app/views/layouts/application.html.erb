@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href=".app/assets/stylesheets/reset.css.scss" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
    <nav class="nav">
+   <div class"logo"> </div>
    <%= render "syte/header" %>
-   <div>
-  
+   
+   <div class="user_nav">  
   <% if current_user %>
-    <%= link_to "Write new article #{current_user.username}", new_article_path%>
+  <div>
+    <%= link_to "Write new article #{current_user.username}", new_article_path%> <div> | <div>
     <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+  </div>
   <% else %>
-    <%= link_to 'Sign in', user_session_path %>
-    <%= link_to 'Sign up', new_user_registration_path %>
+  <div>
+    <%= link_to 'Log in', user_session_path %> <div> | <div>
+    <%= link_to 'Register', new_user_registration_path %>
+  </div>
   <% end %>
   </div>
 </nav>
@@ -35,6 +42,11 @@
   </div>
 <% end %>
 <main class="main">
+<% if current_user.nil? %>
+    <h1> Hello <h1>
+<% else %>
+    <h1 class="cl-og"> Hello <%= current_user.username %></h1>
+<% end %>
     <%= yield %>
 
 <footer>

@@ -1,3 +1,81 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+  
+}
+.user_nav{
+    div{
+        display: flex;
+    }
+}
+.main_page{
+    display: grid;
+    .background{
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        min-height: 400px;
+    }
+}
+.category_grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    .article_image{
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: content-box;
+        background: linear-gradient(rgba(22, 21, 21, 0.89), rgba(255,255,255,.5));
+        opacity: 0.6;
+        width: 18vw;
+        height: 18vw;
+
+        div{
+         
+            display: flex;
+            box-sizing:border-box;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 90%;
+
+            a {
+                color: white;
+                text-decoration: none;
+                border-bottom: yellow 2px solid; }
+              
+        }
+    }
+}
+
+.articles_cat_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    .article{
+        display: flex;
+        border: 1px solid black;
+        .image_article {
+            width: 50%;
+            overflow: hidden;
+            max-height: 20vw;
+            max-width: 15vw;
+            img{
+                min-height:100%; min-width: 100%; object-fit: cover; 
+                position: relative;
+                top: -100px;
+            }         
+
+        }
+        .info_article{
+            width: 50%;
+        }
+    }
+}

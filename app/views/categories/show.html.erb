@@ -1,16 +1,27 @@
 
+<div class="articles_cat_grid">
 <% @articles_cat.each do |article|%>
-  <ul>
+  <section class="article_cat_section">
+  <div class="article">
+  <div class="image_article">
   <% if !article.image.nil? %>
   <img src="<%= cloudinary_url(article.image.key, options = {}) %>">
+  <% else %>
+  <img = src=".app/assets/images/default.jpeg"
   <% end %>
-    <%= article.title %>
-    <%= article.text %>
-    <%= article.user.name %>
+  </div>
+  <div class="info_article">
+    <h2 class="cl-lg"> <%=@category.name %>
+    <h2 class="cl-lg"> <%= article.title %> </h1>
+    <p><%= article.text %></p>
+    <h2>created by:<%= article.user.username %></h2>
     <% category = @category %>
     
     <div> <%= vote_unvote_btn(article, @category.id) %>
       <%= article.votes.count %>
       </div>
-</ul>
+      </div>
+  <div>
+</section>
 <% end %>
+</div>
