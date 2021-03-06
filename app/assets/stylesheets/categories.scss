@@ -1,21 +1,28 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
-.nav{
+$primary-color-dark: #f46326;
+$primary-color: #f9a02e;
+$primary-color-light: #dcedc8;
+$primary-color-text: #212121;
+$primary-color-enphasis: #e54020;
+$primary-color-attenuated: #736e69;
+.line_color_flex{
     display: flex;
-    justify-content: space-between;
-    padding: 1%;
-  
+    height: 0.5vw;
 }
-.user_nav{
-    div{
-        display: flex;
-    }
+.line_color_r{
+    background-color: $primary-color-enphasis;
+    width: 20%;
+}
+.line_color_g{
+    background-color: $primary-color-attenuated;
+    width: 80%;
 }
 .main_page{
     display: grid;
     .background{
+        
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: cover;
@@ -34,9 +41,9 @@
         background-size: cover;
         box-sizing: content-box;
         background: linear-gradient(rgba(22, 21, 21, 0.89), rgba(255,255,255,.5));
-        opacity: 0.6;
-        width: 18vw;
+        width: (100/5)vw;
         height: 18vw;
+        border: 5px solid transparent;
 
         div{
          
@@ -47,11 +54,14 @@
             height: 90%;
 
             a {
-                color: white;
                 text-decoration: none;
                 border-bottom: yellow 2px solid; }
               
         }
+    }
+    .article_image:hover {
+        box-sizing: content-box;
+        border: 5px solid $primary-color-dark;      
     }
 }
 
@@ -66,7 +76,7 @@
             width: 50%;
             overflow: hidden;
             max-height: 20vw;
-            max-width: 15vw;
+            max-width: 19vw;
             img{
                 min-height:100%; min-width: 100%; object-fit: cover; 
                 position: relative;

@@ -1,6 +1,7 @@
 <div class="categories">
     <%= link_to 'Home', root_path , class: "cl-og" %>
-    <% Category.all.each do |category| %>
-      <%= link_to "#{category.name}", category_path(category) %>
-    <% end %>
+    <%# Category.all.each do |category| %>
+      <%# link_to "#{category.name}", category_path(category) %>
+    <%# end %>
+    <%= category_nav %>
   </div>

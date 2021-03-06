@@ -17,14 +17,14 @@
    <div class"logo"> </div>
    <%= render "syte/header" %>
    
-   <div class="user_nav">  
+   <div class="user_nav">
+   <div class="cl-at">
   <% if current_user %>
-  <div>
+ 
     <%= link_to "Write new article #{current_user.username}", new_article_path%> <div> | <div>
     <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
   </div>
   <% else %>
-  <div>
     <%= link_to 'Log in', user_session_path %> <div> | <div>
     <%= link_to 'Register', new_user_registration_path %>
   </div>
@@ -50,9 +50,16 @@
     <%= yield %>
 
 <footer>
-<div> icon </div>
-<div> Policy </div>
-<div> contac </div>
+<div class="footer">
+<div> <img src="../app/assets/images/default.jpeg"> </div>
+<div> <p class="cl-og">Privacy Policy Terms & Conditions <span class="cl-lg">Copyright 2021. All rights reserved.</span></p> </div>
+<div> Contact with us:
+<span class="iconify cl-og" data-icon="ant-design:twitter-circle-filled" data-inline="false"></span> 
+<span class="iconify cl-og radius" data-icon="fa-brands:instagram-square" data-inline="false"></span>
+<span class="iconify cl-og" data-icon="entypo-social:facebook-with-circle" data-inline="false"></span>
+</div>
+</div>
 </footer>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </body>
 </html>

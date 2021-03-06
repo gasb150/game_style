@@ -1,8 +1,33 @@
 $primary-color-dark: #f46326;
 $primary-color: #f9a02e;
-$primary-color-light: #dcedc8;
+$primary-color-light: #ffffff;
 $primary-color-text: #212121;
+$primary-color-attenuated: #736e69;
 
+body{
+    background-color: $primary-color-text;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    font-family: 'Roboto', sans-serif;
+    background-color: $primary-color-light;
+
+    .categories{
+        display: flex;
+        list-style: none;
+        width: 50%;
+        justify-content: space-around;
+    }
+  
+}
+.user_nav{
+    div{
+        display: flex;
+    }
+}
 h1, h2{
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -16,7 +41,11 @@ h1, h2, p{
 }
 a{
     text-decoration: none;
-    color: $primary-color-text;
+    color: $primary-color-attenuated;
+}
+
+.cl-at{
+    color: $primary-color-attenuated;
 }
 
 .cl-og{
@@ -24,4 +53,27 @@ a{
 }
 .cl-lg{
     color: $primary-color-light
+}
+footer{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    max-height: 30vw;
+    height: 50px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    height: 100%;
+    div{
+        align-self: center;
+        height: min-content;
+
+        .iconify{
+            width: 30px;
+            height: 30px;
+            max-height: 10vw;
+        }
+    }
 }
