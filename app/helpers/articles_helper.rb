@@ -36,5 +36,34 @@ module ArticlesHelper
         end
         list.html_safe
     end
-    
+     
+    def articles_cat(articles)
+        list = ""
+        articles.each do |article|
+            list+="<section class='article_cat_section'>"
+            list+="<div class='article'>"
+              list+="<div class='image_article'>"
+              if !article.image.nil?
+                  list+="<img src=\"#{cloudinary_url(article.image.key, options = {})}\">"
+              else
+                  list+="<img = src='.app/assets/images/default.jpeg'>"
+              end
+              list+="</div>"
+              list+="<div class='info_article'>"
+                list+="<h2 class='cl-lg'> #{@category.name}</h2>"
+                list+="<h2 class='cl-lg'> #{article.title} </h2>"
+                list+="<p>#{article.text}</p>"
+                    list+="<h2>created by:#{article.user.username}</h2>"
+                    category = @category              
+                    list+="<div> #{vote_unvote_btn(article, @category.id)}"
+                    list+="<p> article.votes.count </p>"
+                  list+="</div>"
+                  list+="</div>"
+                  list+="<div>"
+        list+="</section>"
+                  
+        end
+        list.html_safe
+    end
+        
 end
