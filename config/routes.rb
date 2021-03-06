@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'articles', to: 'categories#index'
+  #get 'articles', to: 'categories#index'
   devise_for :users
   resources :categories, only: %i[index show new create]
   resources :articles, only: %i[index show new create edit destroy update ]   do
