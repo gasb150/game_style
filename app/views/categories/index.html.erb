@@ -4,20 +4,8 @@
     <%= most_voted(@most_voted) %>
   </div>
   <div class="category_grid">
-    <% @categories_priory.each do |category| %>
-      <% if !category.articles.first.nil? %>
-      <div class="article_image" style= "border: 5px solid black; background-image: linear-gradient(
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.7)
-      ), url(<%= cloudinary_url(category.articles.ordered_by_most_recent.first.image.key, options = {}) %>)">
-        <div>
-        <h2 class="cl-og"><%= link_to category.name, category_path(category) %></h2>
-        <h2>article name:     <%= category.articles.ordered_by_most_recent.first.title %></h2>        
-        </div>
-      </div>
-      <% end %>
+  <%= categories_index(@categories_priory) %> 
          
-      
-<% end %>
+
 </div>
 </div>
