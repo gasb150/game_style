@@ -50,13 +50,19 @@ module ArticlesHelper
               end
               list+="</div>"
               list+="<div class='info_article'>"
-                list+="<h2 class='cl-lg'> #{@category.name}</h2>"
-                list+="<h2 class='cl-lg'> #{article.title} </h2>"
-                list+="<p>#{article.text}</p>"
+                list+="<h2 class='cl-yl cat-name'> #{@category.name}</h2>"
+                list+="<h2 class='cl-dk'> #{article.title} </h2>"
+                text_truncate = truncate(article.text, length: 250)
+                list+="<p> #{text_truncate} </p>"
                     list+="<h2>created by:#{article.user.username}</h2>"
                     category = @category              
-                    list+="<div> #{vote_unvote_btn(article, @category.id)}"
-                    list+="<p> article.votes.count </p>"
+                    
+                    if article.votes.count > 0
+                      list+="<p> numbers of votes #{article.votes.count} </p>"
+                    else
+                      list+="<p> You can be the first vote </p>"
+                    end
+                    list+="<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
                   list+="</div>"
                   list+="</div>"
                   list+="<div>"

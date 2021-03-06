@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $primary-color-dark: #f46326;
 $primary-color: #f9a02e;
-$primary-color-light: #dcedc8;
+$primary-color-light: #ffffff;
 $primary-color-text: #212121;
 $primary-color-enphasis: #e54020;
 $primary-color-attenuated: #736e69;
@@ -18,6 +18,9 @@ $primary-color-attenuated: #736e69;
 .line_color_g{
     background-color: $primary-color-attenuated;
     width: 80%;
+}
+.cl-yl{
+    color: $primary-color;
 }
 .main_page{
     display: grid;
@@ -65,7 +68,10 @@ $primary-color-attenuated: #736e69;
     }
 }
 
+
 .articles_cat_grid{
+
+    
     display: grid;
     grid-template-columns: repeat(3,1fr);
 
@@ -85,7 +91,18 @@ $primary-color-attenuated: #736e69;
 
         }
         .info_article{
+            height: max;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: content-box;
+            padding: 2%;            
             width: 50%;
+            background-color: $primary-color-light;
+            .cat-name{
+                border-bottom: 2px solid $primary-color;
+                width: min-content;
+            }
         }
     }
 }
