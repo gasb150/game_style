@@ -8,6 +8,13 @@ body{
     background-color: $primary-color-text;
 }
 
+.logo{
+    max-height: 5vw;
+    img{
+        height: 100%;
+    }
+}
+
 .nav{
     display: flex;
     justify-content: space-between;
@@ -15,17 +22,24 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: $primary-color-light;
 
+    .logo{
+        width:10% ;
+    }
     .categories{
         display: flex;
         list-style: none;
         width: 50%;
         justify-content: space-around;
+        height: min-content;
+        align-self: center;
     }
   
 }
 .user_nav{
     div{
         display: flex;
+        align-items: center;
+        height: 100%;
     }
 }
 h1, h2{
@@ -62,18 +76,25 @@ footer{
     height: 50px;
 }
 .footer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     text-align: center;
     height: 100%;
+    justify-content: space-between;
     div{
-        align-self: center;
-        height: min-content;
-
+        
+        width: 100%;
+        p{
+            align-self: center;
+        }
         .iconify{
             width: 30px;
             height: 30px;
             max-height: 10vw;
         }
     }
+    .privacy{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }    
 }
