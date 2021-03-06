@@ -7,6 +7,7 @@ class Article < ApplicationRecord
 
     validates :title, presence: true
     validates :text, presence: true
+    validates :image, presence: true
   
 
     #title: params[:title], text: params[:text], image_url: params[:image_url], category_ids: params[:category_ids]
