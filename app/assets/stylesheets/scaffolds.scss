@@ -90,6 +90,13 @@ footer{
             width: 30px;
             height: 30px;
             max-height: 10vw;
+           
+        }
+        .radius{
+            border-radius: 50%;
+            path{
+                border-radius: 50%;
+            }
         }
     }
     .privacy{
