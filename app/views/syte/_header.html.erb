@@ -22,7 +22,7 @@
    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
  </div>
  <% else %>
-   <%= link_to 'Log in', user_session_path %> <div> | <div>
+   <%= link_to 'Sign in', user_session_path %> <div> | <div>
    <%= link_to 'Register', new_user_registration_path %>
  </div>
  <% end %>
