@@ -40,6 +40,11 @@ body{
         display: flex;
         align-items: center;
         height: 100%;
+        
+    }
+    .avatar img{
+        border-radius: 50%;
+        width: 4vw;
     }
 }
 h1, h2{
