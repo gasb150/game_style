@@ -77,13 +77,13 @@ $primary-color-attenuated: #736e69;
 
     .article{
         display: flex;
-        border: 1px solid black;
         .image_article {
             width: 50%;
             overflow: hidden;
             height: 20vw;
             max-width: 25vw;
-            border: 1px solid green;
+            box-sizing: border-box
+           ;
             img{
                 min-height:100%; min-width: 100%; object-fit: cover; 
                 position: relative;
@@ -92,18 +92,101 @@ $primary-color-attenuated: #736e69;
 
         }
         .info_article{
-            height: max;
+            height: 20vw;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-sizing: content-box;
+            box-sizing: border-box;
             padding: 2%;            
-            width: 22.7vw;
+            width: 25vw;
             background-color: $primary-color-light;
             .cat-name{
                 border-bottom: 2px solid $primary-color;
                 width: min-content;
             }
         }
+    }
+}
+.hide{
+    display: none;
+}
+
+
+@media only screen and (max-width: 968px) { 
+    .articles_cat_grid{
+        grid-template-columns: repeat(1, 1fr);
+        .article{
+           
+            border: 1px solid black;
+            .image_article {
+                width: 50%;
+                max-width: 50vw; 
+            }
+            .info_article{        
+                width: 50vw;
+            }
+        }
+        .revert-flex .article{
+            display: flex;
+            flex-direction: row-reverse;
+            .image_article {
+                width: 50%;
+              
+                right:20px;
+                top:0px;
+                overflow: hidden;
+
+            }
+            .info_article{        
+                width: 47.5vw;
+            }
+        }
+        
+    }
+    .show{
+        display: none;
+    }
+    .hide{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 723px) { 
+    .category_grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    .article_image{
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: content-box;
+        background: linear-gradient(rgba(22, 21, 21, 0.89), rgba(255,255,255,.5));
+        width: auto;
+        height:50vw;
+        border: 5px solid transparent;
+    }
+    
+    }
+    .articles_cat_grid {
+    .article{
+
+            display: grid;
+            grid-template-columns: 1fr;
+            .image_article, .info_article{
+                width: 100%;
+                box-sizing: border-box;
+                max-width: 100%;
+                padding: 2% 4%;
+                height: 90vw;
+                h2,p{
+                    font-size: 4vw;
+                }
+                
+            }
+            .image_article img{
+                left: -19px;
+            }
+
+    }
+        
     }
 }
