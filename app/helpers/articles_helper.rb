@@ -123,7 +123,6 @@ module ArticlesHelper
         Category.all.each do |category|
         list+="<div>"
         list+=check_box_tag "article[category_ids][]", category.id, @article.category_ids.include?(category.id), id: dom_id(category)
-        
         list+=label_tag dom_id(category), category.name
         list+="</div>"
       end

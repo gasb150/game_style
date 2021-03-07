@@ -9,7 +9,8 @@ class Article < ApplicationRecord
     validates :text, presence: true
     validates :image, presence: true
     validates :category_ids, presence: true
-  
 
-    #title: params[:title], text: params[:text], image_url: params[:image_url], category_ids: params[:category_ids]
+    validates :title, length: { minimum: 2 }
+    validates :text, length: { minimum: 5 }
+
 end
