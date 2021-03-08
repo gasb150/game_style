@@ -22,14 +22,12 @@ RSpec.describe 'Display votes button', type: :feature do
     expect(page).to have_content('test-text')
   end
   scenario 'With article in category page before vote' do
-    visit category_path(1)
     expect(page).to have_content('numbers of votes 1')
   end
 
   scenario 'With unvoted article before vote' do
-    visit category_path(1)
     click_on 'Unvote!'
-    visit category_path(1)
+
     expect(page).to have_content('You can be the first vote')
   end
 end
