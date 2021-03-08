@@ -65,17 +65,13 @@ RSpec.describe 'create new article without user', type: :feature do
   scenario 'Create article with unvalid user' do
     
      visit new_user_registration_path
-     fill_in 'Name', with: 'gustdavo'
+     fill_in 'Name', with: 'gustavo'
      fill_in 'Username', with: 'gustavo'
      fill_in 'Email', with: 'gusstavo@email.com'
      fill_in 'Password', with: ''
      fill_in 'Confirm your password', with: '123456'
      click_on 'Sign up'
      visit new_article_path
-     fill_in 'Title', with: 'test-title'
-     fill_in 'Text', with: 'test-text'
-     check "category_1"
-     click_on 'Create Article'
      expect(page).to have_content('Hello')
   end
 
