@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module ApplicationHelper
   def vote_unvote_btn(article, category)
     unless current_user.nil?

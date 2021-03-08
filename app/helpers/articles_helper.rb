@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module ArticlesHelper
   def most_voted(most_voted)
     list = ''

@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 class VotesController < ApplicationController
   def create
     @vote = current_user.votes.new(article_id: params[:article_id])
     if @vote.save
-      redirect_to root_path,  notice: "You vote to \"#{@vote.article.title}\" article"
+      redirect_to root_path, notice: "You vote to \"#{@vote.article.title}\" article"
     else
-      redirect_to root_path,  notice: "Sorry you can't vote to #{@vote.article.title}"
+      redirect_to root_path, notice: "Sorry you can't vote to #{@vote.article.title}"
     end
   end
 

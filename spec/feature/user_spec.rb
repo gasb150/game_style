@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 RSpec.describe 'create new user', type: :feature do
   scenario 'Create new user with valid user and valid inputs' do
