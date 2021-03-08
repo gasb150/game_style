@@ -3,9 +3,10 @@ $primary-color: #f9a02e;
 $primary-color-light: #ffffff;
 $primary-color-text: #212121;
 $primary-color-attenuated: #736e69;
+$primary-color-body: #4e443f;
 
 body{
-    background-color: $primary-color-text;
+    background-color: $primary-color-body;
 }
 
 .logo{
