@@ -35,73 +35,79 @@ module ArticlesHelper
     list.html_safe
   end
 
+  def article_s_t(article)
+    list = "<div class='image_article'>"
+    list += if !article.image.nil?
+              "<img src=\"#{cloudinary_url(article.image.key, options = {})}\">"
+            else
+              "<img = src='.app/assets/images/default.jpeg'>"
+            end
+    list += '</div>'
+    list += "<div class='info_article'>"
+    list += "<h2 class='cl-yl cat-name'> #{@category.name}</h2>"
+    list += "<h2 class='cl-dk'> #{article.title} </h2>"
+    text_truncate = truncate(article.text, length: 250)
+    list += "<p> #{text_truncate} </p>"
+    list += "<h2>created by:#{article.user.username}</h2>"
+    category = @category
+
+    list += if article.votes.count.positive?
+              "<p> numbers of votes #{article.votes.count} </p>"
+            else
+              '<p> You can be the first vote </p>'
+            end
+    list += "<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
+    list += '</div>'
+    list += '</div>'
+    list += '<div>'
+    list += '</section>'
+
+    list
+  end
+
+  def article_s_f(article)
+    list = "<div class='info_article'>"
+    list += "<h2 class='cl-yl cat-name'> #{@category.name}</h2>"
+    list += "<h2 class='cl-dk'> #{article.title} </h2>"
+    text_truncate = truncate(article.text, length: 250)
+    list += "<p> #{text_truncate} </p>"
+    list += "<h2>created by:#{article.user.username}</h2>"
+
+    list += if article.votes.count.positive?
+              "<p> numbers of votes #{article.votes.count} </p>"
+            else
+              '<p> You can be the first vote </p>'
+            end
+    list += "<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
+    list += '</div>'
+    list += '</div>'
+    list += "<div class='image_article'>"
+    list += if !article.image.nil?
+              "<img src=\"#{cloudinary_url(article.image.key, options = {})}\">"
+            else
+              "<img = src='.app/assets/images/default.jpeg'>"
+            end
+    list += '</div>'
+    list += '<div>'
+    list
+  end
+
   def articles_cat(articles)
     list = ''
     i = 0
     switch = true
     articles.each do |article|
-      if switch == true
+      list += "<section class='article_cat_section'>"
+      list += "<div class='article'>"
+      list += if switch == true
 
-        list += "<section class='article_cat_section'>"
-        list += "<div class='article'>"
-        list += "<div class='image_article'>"
-        list += if !article.image.nil?
-                  "<img src=\"#{cloudinary_url(article.image.key, options = {})}\">"
-                else
-                  "<img = src='.app/assets/images/default.jpeg'>"
-                end
-        list += '</div>'
-        list += "<div class='info_article'>"
-        list += "<h2 class='cl-yl cat-name'> #{@category.name}</h2>"
-        list += "<h2 class='cl-dk'> #{article.title} </h2>"
-        text_truncate = truncate(article.text, length: 250)
-        list += "<p> #{text_truncate} </p>"
-        list += "<h2>created by:#{article.user.username}</h2>"
-        category = @category
+                article_s_t(article)
+              else
 
-        list += if article.votes.count.positive?
-                  "<p> numbers of votes #{article.votes.count} </p>"
-                else
-                  '<p> You can be the first vote </p>'
-                end
-        list += "<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
-        list += '</div>'
-        list += '</div>'
-        list += '<div>'
-        list += '</section>'
+                article_s_f(article)
 
-      else
-        list += "<section class='article_cat_section'>"
-
-        list += "<div class='article'>"
-
-        list += "<div class='info_article'>"
-        list += "<h2 class='cl-yl cat-name'> #{@category.name}</h2>"
-        list += "<h2 class='cl-dk'> #{article.title} </h2>"
-        text_truncate = truncate(article.text, length: 250)
-        list += "<p> #{text_truncate} </p>"
-        list += "<h2>created by:#{article.user.username}</h2>"
-        category = @category
-
-        list += if article.votes.count.positive?
-                  "<p> numbers of votes #{article.votes.count} </p>"
-                else
-                  '<p> You can be the first vote </p>'
-                end
-        list += "<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
-        list += '</div>'
-        list += '</div>'
-        list += "<div class='image_article'>"
-        list += if !article.image.nil?
-                  "<img src=\"#{cloudinary_url(article.image.key, options = {})}\">"
-                else
-                  "<img = src='.app/assets/images/default.jpeg'>"
-                end
-        list += '</div>'
-        list += '<div>'
-        list += '</section>'
-
-      end
+              end
+      list += '</section>'
       i += 1
       next unless i.even?
 
