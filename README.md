@@ -40,3 +40,17 @@ I create a rails app, accordding to
     1. A form with all necessary fields is displayed.
     2. It's not in the given design, but you should make an effort to follow the same style of the other pages.
 6. At the end extend your MVP app with one simple feature of your choice.
+
+
+I create a rails app, according to Nelson Sakwa on Behance design, the user logs in to the app, the user is presented with the homepage, that includes:
+    1. Featured article, with the biggest number of votes, with full-width image and title in the first row.
+    2. List all categories in order of priority. Displayed as a square with its name on the top and its most recent article's title at the bottom. The background image is the image of the most recent article in this category.
+3.  When the user clicks the category name they can see all articles in that category:
+    1. Articles are sorted by most recent.
+    2. Each article displays an image, title, truncated text as a preview, and its author username.
+    3. Extra button to add a vote for article (each user can vote only once).
+ 4. Each page uses the same top menu and footer:
+    1. Top menu is presented at the *Homepage* screenshot above. Include links to pages that are implemented: Home, articles categories, write an article, and sing out.
+5. When the user opens the "*Write an article*" page:
+    1. A form with all necessary fields is displayed.
+6. This webpage it's responsive.

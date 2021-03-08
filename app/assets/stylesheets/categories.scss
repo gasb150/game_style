@@ -71,7 +71,7 @@ $primary-color-attenuated: #736e69;
 
 .articles_cat_grid{
     width: 98%;
-    overflow: hidden;
+    overflow-x: hidden;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);

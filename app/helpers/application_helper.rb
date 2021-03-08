@@ -1,3 +1,4 @@
+# rubocop:disable Style/GuardClause
 module ApplicationHelper
   def vote_unvote_btn(article, category)
     unless current_user.nil?
@@ -8,8 +9,10 @@ module ApplicationHelper
 
       else
         link_to('Vote!',
-                article_votes_path(article_id: article.id, user_id: current_user.id, category_id: category), method: :post, class: 'cl-yl')
+                article_votes_path(article_id: article.id, user_id: current_user.id, category_id: category),
+                method: :post, class: 'cl-yl')
       end
     end
   end
 end
+# rubocop:enable Style/GuardClause

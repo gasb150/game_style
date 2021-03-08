@@ -5,7 +5,7 @@ module ArticlesHelper
       list += "<div class='background' style= 'background-image: linear-gradient(
             rgba(0, 0, 0, 0.3),
             rgba(0, 0, 0, 0.3)
-          ), url(\"#{cloudinary_url(most_voted.image.key, options = {})}\")'>"
+          ), url(\"#{cloudinary_url(most_voted.image.key)}\")'>"
       list += '<ul>'
       list += "<h2 class='cl-og'> #{most_voted.title} </h2>"
       list += "<p class='cl-lg'> #{most_voted.text} </p>"
@@ -24,48 +24,27 @@ module ArticlesHelper
                               linear-gradient(
                               rgba(0, 0, 0, 0.5),
                               rgba(0, 0, 0, 0.5)),
-                              url(\"#{cloudinary_url(category.articles.ordered_by_most_recent.first.image.key,
-                                                     options = {})}\")'>"
+                              url(\"#{cloudinary_url(category.articles.ordered_by_most_recent.first.image.key)}\")'>"
       list += '<div>'
       list += "<h2>#{link_to category.name, category_path(category), class: 'cl-lg'}</h2>"
       list += "<h2 class='cl-lg'>article name:     #{category.articles.ordered_by_most_recent.first.title}</h2>"
-      list += '</div>'
-      list += '</div>'
+      list += '</div> </div>'
     end
     list.html_safe
   end
 
-  def article_s_t(article)
+  def image_article(article)
     list = "<div class='image_article'>"
     list += if !article.image.nil?
-              "<img src=\"#{cloudinary_url(article.image.key, options = {})}\">"
+              "<img src=\"#{cloudinary_url(article.image.key)}\">"
             else
               "<img = src='.app/assets/images/default.jpeg'>"
             end
     list += '</div>'
-    list += "<div class='info_article'>"
-    list += "<h2 class='cl-yl cat-name'> #{@category.name}</h2>"
-    list += "<h2 class='cl-dk'> #{article.title} </h2>"
-    text_truncate = truncate(article.text, length: 250)
-    list += "<p> #{text_truncate} </p>"
-    list += "<h2>created by:#{article.user.username}</h2>"
-    category = @category
-
-    list += if article.votes.count.positive?
-              "<p> numbers of votes #{article.votes.count} </p>"
-            else
-              '<p> You can be the first vote </p>'
-            end
-    list += "<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
-    list += '</div>'
-    list += '</div>'
-    list += '<div>'
-    list += '</section>'
-
     list
   end
 
-  def article_s_f(article)
+  def info_article(article)
     list = "<div class='info_article'>"
     list += "<h2 class='cl-yl cat-name'> #{@category.name}</h2>"
     list += "<h2 class='cl-dk'> #{article.title} </h2>"
@@ -79,15 +58,23 @@ module ArticlesHelper
               '<p> You can be the first vote </p>'
             end
     list += "<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
-    list += '</div>'
-    list += '</div>'
-    list += "<div class='image_article'>"
-    list += if !article.image.nil?
-              "<img src=\"#{cloudinary_url(article.image.key, options = {})}\">"
-            else
-              "<img = src='.app/assets/images/default.jpeg'>"
-            end
-    list += '</div>'
+    list += '</div> </div>'
+
+    list
+  end
+
+  def article_s_t(article)
+    list = image_article(article)
+    list += info_article(article)
+
+    list += '<div>'
+    list
+  end
+
+  def article_s_f(article)
+    list = info_article(article)
+
+    list += image_article(article)
     list += '<div>'
     list
   end
