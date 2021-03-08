@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'articles', to: 'categories#index'
+  get 'users', to: 'categories#index'
+  get 'users/:id', to: 'categories#index'
   devise_for :users
   resources :categories, only: %i[index show new create]
   resources :articles, only: %i[index show new create edit]   do
