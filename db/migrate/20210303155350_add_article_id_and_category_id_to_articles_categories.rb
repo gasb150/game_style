@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddArticleIdAndCategoryIdToArticlesCategories < ActiveRecord::Migration[6.1]
   def change
     add_column :articles_categories, :article_id, :integer
