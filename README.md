@@ -104,6 +104,7 @@ And we need to migrate the database to
 Run this command
 ```
 1 | heroku run rails db:migrate
+2 | heroku run rails db:seed
 ```
 2.5. Enjoy this app
 ```
