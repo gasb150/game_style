@@ -1,4 +1,4 @@
-# GAME STYLE
+### GAME STYLE
 
 I create a rails app, according to [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) design [liFEsTlye](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version), the user logs in to the app, the user is presented with the homepage
 
@@ -33,6 +33,8 @@ https://www.loom.com/share/dde557e117144f89938201ab54a0533b
 - Ruby on Rails v6.1.3
 
 ## Live Demo
+
+[GameStyle](https://ancient-peak-99624.herokuapp.com/)
 
 ## :wrench: Getting Started
 > Take a copy of this project locally
