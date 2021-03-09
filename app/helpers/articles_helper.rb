@@ -55,22 +55,23 @@ module ArticlesHelper
             else
               '<p> You can be the first vote </p>'
             end
-    list += "<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
+    list += "<div class=vote> #{vote_unvote_btn(article, @category.id)}"
     list += '</div> </div>'
+    
     list
   end
 
   def article_s_t(article)
     list = image_article(article)
     list += info_article(article)
-    list += '<div>'
+
     list
   end
 
   def article_s_f(article)
     list = info_article(article)
     list += image_article(article)
-    list += '<div>'
+
     list
   end
 
