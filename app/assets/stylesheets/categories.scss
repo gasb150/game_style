@@ -32,7 +32,7 @@ $primary-color-attenuated: #736e69;
 
   .background {
     background-repeat: no-repeat;
-    background-position: 0 30%;
+    background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column-reverse;
@@ -48,9 +48,9 @@ $primary-color-attenuated: #736e69;
   .article_image {
     background-repeat: no-repeat;
     background-size: cover;
-    box-sizing: content-box;
+    box-sizing: border-box;
     height: 18vw;
-    border: 5px solid transparent;
+    border: 5px solid rgba(0, 0, 0, 0.5);
 
     div {
       display: flex;
@@ -67,7 +67,7 @@ $primary-color-attenuated: #736e69;
   }
 
   .article_image:hover {
-    box-sizing: content-box;
+    box-sizing: border-box;
     border: 5px solid $primary-color-dark;
   }
 }
@@ -165,17 +165,13 @@ $primary-color-attenuated: #736e69;
 
 @media only screen and (max-width: 723px) {
   .category_grid {
-    display: grid;
+
     grid-template-columns: repeat(1, 1fr);
 
     .article_image {
-      background: linear-gradient(rgba(22, 21, 21, 0.89), rgba(255, 255, 255, 0.5));
-      background-repeat: no-repeat;
-      background-size: cover;
-      box-sizing: content-box;
+     
       width: auto;
       height: 50vw;
-      border: 5px solid transparent;
     }
   }
 
