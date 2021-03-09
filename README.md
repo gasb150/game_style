@@ -2,7 +2,7 @@
 
 I create a rails app, according to [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) design [liFEsTlye](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version), the user logs in to the app, the user is presented with the homepage
 
-Each page uses the same top menu and footer, include links to pages that are implemented: Home, articles categories, write an article, and sing out. with featured article, with the biggest number of votes, with full-width image and title in the first row of home page.
+Each page uses the same top menu and footer, include links to pages that are implemented: Home, articles categories, write an article, and sing out. with a featured article, with the biggest number of votes, with a full-width image and title in the first row of the home page.
 
   
 List all categories in order of priority. Displayed as a square with its name on the top and its most recent article's title at the bottom. The background image is the image of the most recent article in this category.
@@ -23,19 +23,36 @@ And also this webpage it's responsive.
 <img src="app/assets/images/Home_responsive.png">
 <img src="app/assets/images/Article_responsive.png" style="width: 50%">
 
-## Built With
+## :video_camera: Video description
+
+https://www.loom.com/share/dde557e117144f89938201ab54a0533b
+
+## :computer: Built With
 
 - Ruby v2.7.2
-- Ruby on Rails v5.2.4
+- Ruby on Rails v6.1.3
+
+## Live Demo
+
+## :wrench: Getting Started
+> Take a copy of this project locally
+
+- Go to the main page of the repo.
+- Press the "Code" button and get the repo link.
+- Clone it using git clone. 
+```
+git clone 'repo_link' 
+```
 
 ### Setup
-Open the terminal in the current proyect folder and then
+Open the terminal in the current project folder and then
 
 1. Instal gems with:
 
 ```
-1 | bundle install
+1 | bundle _2.1.4_ install
 ```
+** bundle with 2.1.4 avoid problems with Heroku **
 
 2. Setup database with:
 
@@ -118,7 +135,7 @@ Run this command
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
@@ -135,5 +152,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 <p>This project is <a href="LICENSE">MIT</a> licensed.</p>
-
-
