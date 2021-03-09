@@ -84,7 +84,7 @@ module ArticlesHelper
     i = 0
     switch = true
     articles.each do |article|
-      list += "<section class='article_cat_section'>"
+      list += "<section class='article_cat_section show'>"
       list += "<div class='article'>"
       list += if switch == true
 
@@ -95,6 +95,10 @@ module ArticlesHelper
 
               end
       list += '</section>'
+       list += "<section class='article_cat_section hide'>"
+       list += "<div class='article'>"
+      list+= article_s_t(article)
+     list+='</section>'
       i += 1
       next unless i.even?
 
