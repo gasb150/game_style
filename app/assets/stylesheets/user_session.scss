@@ -1,38 +1,53 @@
 $primary-color-dark: #f46326;
-$primary-color-light: #ffffff;
-.log_user, .singup_user{
+$primary-color-light: #fff;
+
+.log_user,
+.singup_user {
+  font-size: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .log-in-title,
+  .sing-up-title {
     font-size: 5vw;
+    border-bottom: 5px solid $primary-color-dark;
+  }
+
+  .optional {
+    font-size: 5vw;
+  }
+
+  .required {
+    font-size: 3vw;
+  }
+
+  .user_email,
+  .user_password,
+  .user_remember_me,
+  .form-actions,
+  .user_name,
+  .user_username,
+  .user_password_confirmation {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    .log-in-title, .sing-up-title{
-        font-size: 5vw;
-        border-bottom: 5px solid $primary-color-dark;
+    color: $primary-color-light;
+
+    .btn {
+      font-size: 30px;
+      width: 50%;
+      background: $primary-color-dark;
+      border: $primary-color-dark;
     }
-   .optional{
-       font-size: 5vw;
-   }
-   .required{
-       font-size: 3vw;
-   }
-   .user_email, .user_password, .user_remember_me, .form-actions, .user_name, .user_username, .user_password_confirmation{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       color: $primary-color-light;
-       .btn{
-           font-size: 30px;
-           width: 50%;
-           background: $primary-color-dark;
-           border: $primary-color-dark;
-       }
-   }
-   
+  }
 }
-.singup_user{
+
+.singup_user {
+  font-size: 3vw;
+
+  .sing-up-title {
     font-size: 3vw;
-    .sing-up-title{
-        font-size: 3vw;
-    }
+  }
 }
