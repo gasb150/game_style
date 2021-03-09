@@ -27,7 +27,7 @@ $primary-color-attenuated: #736e69;
     .background{
         
         background-repeat: no-repeat;
-        background-position: bottom;
+        background-position: 0 30%;
         background-size: cover;
         display: flex;
         flex-direction: column-reverse;
@@ -43,8 +43,6 @@ $primary-color-attenuated: #736e69;
         background-repeat: no-repeat;
         background-size: cover;
         box-sizing: content-box;
-        background: linear-gradient(rgba(22, 21, 21, 0.89), rgba(255,255,255,.5));
-        width: (100/5)vw;
         height: 18vw;
         border: 5px solid transparent;
 
@@ -86,9 +84,7 @@ $primary-color-attenuated: #736e69;
             box-sizing: border-box
            ;
             img{
-                min-height:100%; min-width: 100%; object-fit: cover; 
-                position: relative;
-                top: -100px;
+               height:100%; width: 100%; object-fit: cover; 
             }         
 
         }
@@ -178,7 +174,6 @@ $primary-color-attenuated: #736e69;
                 width: 100%;
                 box-sizing: border-box;
                 max-width: 100%;
-                padding: 2% 4%;
                 height: 90vw;
                 h2,p{
                     font-size: 4vw;

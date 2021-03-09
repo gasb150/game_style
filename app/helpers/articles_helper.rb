@@ -5,12 +5,10 @@ module ArticlesHelper
       list += "<div class='background' style= 'background-image: linear-gradient(
             rgba(0, 0, 0, 0.3),
             rgba(0, 0, 0, 0.3)
-          ), url(\"#{cloudinary_url(most_voted.image.key)}\")'>"
-      list += '<ul>'
+          ), url(\"#{cloudinary_url(most_voted.image.key)}\")'> <ul>"
       list += "<h2 class='cl-og'> #{most_voted.title} </h2>"
       list += "<p class='cl-lg'> #{most_voted.text} </p>"
-      list += '</ul>'
-      list += '</div>'
+      list += '</ul> </div>'
     end
     list.html_safe
   end
@@ -59,21 +57,18 @@ module ArticlesHelper
             end
     list += "<div class> <p>#{vote_unvote_btn(article, @category.id)}</p>"
     list += '</div> </div>'
-
     list
   end
 
   def article_s_t(article)
     list = image_article(article)
     list += info_article(article)
-
     list += '<div>'
     list
   end
 
   def article_s_f(article)
     list = info_article(article)
-
     list += image_article(article)
     list += '<div>'
     list
@@ -95,10 +90,9 @@ module ArticlesHelper
 
               end
       list += '</section>'
-       list += "<section class='article_cat_section hide'>"
-       list += "<div class='article'>"
-      list+= article_s_t(article)
-     list+='</section>'
+      list += "<section class='article_cat_section hide'> <div class='article'>"
+      list += article_s_t(article)
+      list += '</section>'
       i += 1
       next unless i.even?
 
