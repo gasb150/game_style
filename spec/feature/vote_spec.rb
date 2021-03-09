@@ -16,7 +16,7 @@ RSpec.describe 'Display votes button', type: :feature do
     attach_file('article[image]', './app/assets/images/default.jpeg')
     click_on 'Create Article'
     visit category_path(1)
-    click_on 'Vote!'
+    find('.vote_show').click
   end
   scenario 'With article in root page before vote' do
     expect(page).to have_content('test-text')
@@ -26,7 +26,7 @@ RSpec.describe 'Display votes button', type: :feature do
   end
 
   scenario 'With unvoted article before vote' do
-    click_on 'Unvote!'
+    find('.unvote_show').click
 
     expect(page).to have_content('You can be the first vote')
   end

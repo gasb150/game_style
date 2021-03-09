@@ -42,7 +42,7 @@ module ArticlesHelper
     list
   end
 
-  def info_article(article)
+  def info_article(article, hos)
     list = "<div class='info_article'>"
     list += "<h2 class='cl-yl cat-name'> #{@category.name}</h2>"
     list += "<h2 class='cl-dk'> #{article.title} </h2>"
@@ -55,21 +55,20 @@ module ArticlesHelper
             else
               '<p> You can be the first vote </p>'
             end
-    list += "<div class=vote> #{vote_unvote_btn(article, @category.id)}"
-    list += '</div> </div>'
-    
+    list += "<div class=vote> #{vote_unvote_btn(article, @category.id, hos)} '</div> </div>'"
+
     list
   end
 
-  def article_s_t(article)
+  def article_s_t(article, hos)
     list = image_article(article)
-    list += info_article(article)
+    list += info_article(article, hos)
 
     list
   end
 
-  def article_s_f(article)
-    list = info_article(article)
+  def article_s_f(article, hos)
+    list = info_article(article, hos)
     list += image_article(article)
 
     list
@@ -78,21 +77,24 @@ module ArticlesHelper
   def articles_cat(articles)
     list = ''
     i = 0
+    hos = 0
     switch = true
     articles.each do |article|
+      hos = 0
       list += "<section class='article_cat_section show'>"
       list += "<div class='article'>"
       list += if switch == true
 
-                article_s_t(article)
+                article_s_t(article, hos)
               else
 
-                article_s_f(article)
+                article_s_f(article, hos)
 
               end
       list += '</section>'
+      hos = 1
       list += "<section class='article_cat_section hide'> <div class='article'>"
-      list += article_s_t(article)
+      list += article_s_t(article, hos)
       list += '</section>'
       i += 1
       next unless i.even?
