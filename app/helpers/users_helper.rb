@@ -14,7 +14,7 @@ def user_nav()
     list+="<div> | <div>"
     list+=link_to 'Sign out', destroy_user_session_path, method: :delete 
   else
-    list+=link_to 'Sign in', user_session_path
+    list=link_to 'Sign in', user_session_path
     list+= "<div> | <div>"
     list+=link_to 'Register', new_user_registration_path
   end

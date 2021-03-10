@@ -120,6 +120,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.10.0)
     execjs (2.7.0)
+    ffaker (2.18.0)
     ffi (1.15.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -328,6 +329,7 @@ DEPENDENCIES
   cloudinary
   database_cleaner (~> 2.0, >= 2.0.1)
   devise
+  ffaker
   hirb
   jbuilder (~> 2.7)
   jquery-rails

@@ -7,7 +7,7 @@ module VotesHelper
       list += "<div class='background' style= 'background-image: linear-gradient(
             rgba(0, 0, 0, 0.3),
             rgba(0, 0, 0, 0.3)
-          ), url(\"#{cloudinary_url(most_voted.image.key)}\")'> <ul>"
+          ), url(\"#{article_image(most_voted)}\")'> <ul>"
       list += "<h2 class='cl-og'> #{most_voted.title} </h2>"
       list += "<p class='cl-lg'> #{most_voted.text} </p>"
       list += '</ul> </div>'

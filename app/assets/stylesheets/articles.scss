@@ -50,7 +50,6 @@ $primary-color-attenuated: #736e69;
     .article_text {
       display: flex;
       flex-direction: column;
-
       label[for=article_text] {
         align-items: center;
         text-align: center;
@@ -58,6 +57,7 @@ $primary-color-attenuated: #736e69;
         border-bottom: $primary-color-dark solid 5px;
         color: $primary-color-dark;
       }
+
     }
 
     .form-control {

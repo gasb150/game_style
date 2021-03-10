@@ -8,7 +8,7 @@ module ArticlesHelper
                               linear-gradient(
                               rgba(0, 0, 0, 0.5),
                               rgba(0, 0, 0, 0.5)),
-                              url(\"#{cloudinary_url(category.articles.ordered_by_most_recent.first.image.key)}\")'>"
+                              url(\"#{article_grid_image(category)}\")'>"
       list += '<div>'
       list += "<h2>#{link_to category.name, category_path(category), class: 'cl-lg'}</h2>"
       list += "<h2 class='cl-lg'>article name:     #{category.articles.ordered_by_most_recent.first.title}</h2>"
@@ -20,9 +20,9 @@ module ArticlesHelper
   def image_article(article)
     list = "<div class='image_article'>"
     list += if !article.image.nil?
-              "<img src=\"#{cloudinary_url(article.image.key)}\">"
+              "<img src=\"#{article_image(article)}\">"
             else
-              "<img = src='.app/assets/images/default.jpeg'>"
+              image_tag(url_for(article_image(article)))
             end
     list += '</div>'
     list

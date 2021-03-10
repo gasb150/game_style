@@ -7,30 +7,40 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Category.create!(
   name: 'Action',
-  priority: '1'
+  priority: 1
 )
 
 Category.create!(
   name: 'Adventure',
-  priority: '5'
+  priority: 5
 )
 Category.create!(
   name: 'Role-playing',
-  priority: '3'
+  priority: 3
 )
 Category.create!(
   name: 'Simulation',
-  priority: '4'
+  priority: 4
 )
 Category.create!(
   name: 'Strategy',
-  priority: '7'
+  priority: 7
 )
 Category.create!(
   name: 'Sports',
-  priority: '6'
+  priority: 6
 )
 Category.create!(
   name: 'MMO',
-  priority: '2'
+  priority: 2
 )
+
+cat1 = Article.create!(
+  title: 'string',
+  text: 'textasasas',
+  user_id: 1,
+  image: 'default.jpg',
+  category_ids: 1,
+)
+#cat1.image.attach(io: File.open('app/assets/images/default.jpeg'), filename: 'default.jpg')
+

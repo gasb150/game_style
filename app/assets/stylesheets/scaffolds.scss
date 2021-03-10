@@ -6,6 +6,8 @@ $primary-color-attenuated: #736e69;
 $primary-color-body: #4e443f;
 
 body {
+  min-height: 100vh;
+  position: relative;
   background-color: $primary-color-body;
 }
 
@@ -86,7 +88,9 @@ a {
 }
 
 footer {
-  width: 95%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   margin: auto;
   text-align: center;
   max-height: 30vw;
