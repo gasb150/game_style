@@ -1,4 +1,5 @@
 # rubocop:disable Style/GuardClause
+# rubocop:disable Metrics/PerceivedComplexity
 module ApplicationHelper
   def vote_unvote_btn(article, category, hos)
     unless current_user.nil?
