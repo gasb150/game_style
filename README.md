@@ -25,7 +25,7 @@ And also this webpage it's responsive.
 
 ## :video_camera: Video description
 
-https://www.loom.com/share/dde557e117144f89938201ab54a0533b
+[Video GameStyle](https://www.loom.com/share/dde557e117144f89938201ab54a0533b)
 
 ## :computer: Built With
 
