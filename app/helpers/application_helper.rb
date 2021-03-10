@@ -25,6 +25,7 @@
     list += link_to 'Back', root_path
     list += "</div>"
      end
+     list.html_safe
      end
   end
 
