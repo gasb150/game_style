@@ -3,47 +3,20 @@
 
 <div class="categories">
     <%= link_to 'Home', root_path , class: "cl-og" %>
-    <%# Category.all.each do |category| %>
-      <%# link_to "#{category.name}", category_path(category) %>
-    <%# end %>
+    
     <%= category_nav %>
   </div>
 
 
   <div class="user_nav">
   <div class="cl-at">
-  <% if current_user %>
-  <div class="avatar">
-   <%= user_gravatar(current_user) %>
-   </div>
-   <%= link_to "Write new article #{current_user.username} ", new_article_path %>
-  
-   <div> | <div>
-   <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+ <%= user_nav() %>
  </div>
- <% else %>
-   <%= link_to 'Sign in', user_session_path %> <div> | <div>
-   <%= link_to 'Register', new_user_registration_path %>
- </div>
- <% end %>
  </div>
 </nav>
-<% if notice.present? %>
- <div class="notice">
-   <p class="cl-og"> <%= notice %> </p>
- </div>
-<% end %>
-<% if alert.present? %>
- <div class="alert">
-   <p class="cl-og"> <%= alert %> </p>
- </div>
-<% end %>
+<%= notice_message(notice,alert) %>
 <main class="main">
-<% if current_user.nil? %>
-   <h1 class="cl-og"> Hello </h1>
-<% else %>
-   <h1 class="cl-og"> Hello <%= current_user.username %></h1>
-<% end %>
+<%= user_wellcome() %>
 
 
   
