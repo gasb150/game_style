@@ -67,6 +67,8 @@ end
 gem 'active_storage_validations'
 gem 'cloudinary'
 gem 'hirb'
+gem 'bootstrap', '~> 5.0.0.beta2'
+gem 'jquery-rails'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
