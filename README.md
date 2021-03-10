@@ -16,12 +16,8 @@ When the user clicks the category name they can see all articles in that categor
 When the user opens the Write an article page:
 A form with all necessary fields is displayed.
 
-<img src="app/assets/images/New_article.jpeg">
 
 And also this webpage it's responsive.
-
-<img src="app/assets/images/Home_responsive.png">
-<img src="app/assets/images/Article_responsive.png" style="width: 50%">
 
 ## :video_camera: Video description
 

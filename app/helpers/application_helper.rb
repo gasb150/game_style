@@ -1,38 +1,36 @@
-# rubocop:disable Style/GuardClause, Metrics/PerceivedComplexity
+# # rubocop:disable Style/GuardClause, Metrics/PerceivedComplexity
 
-module ApplicationHelper
-  def vote_unvote_btn(article, category, hos)
-    unless current_user.nil?
-      @vote = Vote.find_by(article: article, user: current_user)
+ module ApplicationHelper
 
-      if @vote
-        list = "<span class='iconify cl-yl' data-icon='ic:baseline-check-box' data-inline='false'></span>"
-        list += if hos.zero?
-                  link_to('Unvote!', article_vote_path(id: @vote.id, article_id: article.id, category_id: category),
-                          method: :delete, class: 'cl-yl unvote_show').to_s
-                else
-                  link_to('Unvote!', article_vote_path(id: @vote.id, article_id: article.id, category_id: category),
-                          method: :delete, class: 'cl-yl unvote_hide').to_s
-                end
-        list
+  def create_article(article)
+   if current_user.nil?
+    controller.redirect_to root_path
+   else
+    list = "<div class='new-article cl-lg'>"
+    list +="<h1>New Article</h1>"
+    list += render 'form', article: @article
+    list += link_to 'Back', root_path
+    list += "</div>"
+   end
+   list.html_safe
+   end
 
-      else
-        list = "<span class='iconify cl-yl' data-icon='ic:baseline-check-box-outline-blank'"
-        list += " data-inline='false'> </span>"
-        list += if hos.zero?
-                  link_to('Vote me!',
-                          article_votes_path(article_id: article.id, user_id: current_user.id, category_id: category),
-                          method: :post, class: 'cl-yl vote_show').to_s
-                else
-                  link_to('Vote me!',
-                          article_vote_path(article_id: article.id, user_id: current_user.id, category_id: category),
-                          method: :post, class: 'cl-yl vote_hide').to_s
-                end
 
-      end
-      list
 
-    end
+
+
+
+
+   def edit_article(article)
+    if current_user.nil?
+      controller.redirect_to root_path
+     else
+      list = "<div class='new-article cl-lg'>"
+    list +="<h1>Editing Article</h1>"
+    list += render 'form', article: @article
+    list += link_to 'Back', root_path
+    list += "</div>"
+     end
+     end
   end
-end
-# rubocop:enable Style/GuardClause, Metrics/PerceivedComplexity
+# # rubocop:enable Style/GuardClause, Metrics/PerceivedComplexity

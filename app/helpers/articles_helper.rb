@@ -1,18 +1,4 @@
 module ArticlesHelper
-  def most_voted(most_voted)
-    list = ''
-    unless most_voted.nil?
-      list += "<div class='background' style= 'background-image: linear-gradient(
-            rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.3)
-          ), url(\"#{cloudinary_url(most_voted.image.key)}\")'> <ul>"
-      list += "<h2 class='cl-og'> #{most_voted.title} </h2>"
-      list += "<p class='cl-lg'> #{most_voted.text} </p>"
-      list += '</ul> </div>'
-    end
-    list.html_safe
-  end
-
   def categories_index(categories)
     list = ''
     categories.each do |category|
@@ -55,8 +41,10 @@ module ArticlesHelper
             else
               '<p> You can be the first vote </p>'
             end
-    list += "<div class=vote> #{vote_unvote_btn(article, @category.id, hos)} '</div> </div>'"
-
+    list += "<div class=vote> #{vote_unvote_btn(article, @category.id, hos)} '</div> "
+    list += "<p> #{link_to 'Edit', edit_article_path(article)}</p>" if article.user==current_user
+    list += "</div>'"
+       
     list
   end
 
