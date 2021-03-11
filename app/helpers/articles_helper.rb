@@ -1,6 +1,4 @@
 module ArticlesHelper
-  
-
   def image_article(article)
     list = "<div class='image_article'>"
     list += if !article.image.nil?
@@ -25,7 +23,7 @@ module ArticlesHelper
             else
               '<p> You can be the first vote </p>'
             end
-    list += "<div class=vote> #{vote_unvote_btn(article, @category.id, hos)} '</div> "
+    list += "<div class=vote> #{vote_unvote_btn(article, @category.id, hos)} </div> "
     list += "<p> #{link_to 'Edit', edit_article_path(article)}</p>" if article.user == current_user
     list += "</div>'"
 
