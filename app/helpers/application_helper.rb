@@ -45,7 +45,7 @@ module ApplicationHelper
     if article.image.attached?
       cloudinary_url(article.image.key)
     elsif article.image_url
-      article.image_url.to_s
+      image_url(article.image_url)
     else
       '/assets/default.jpeg'
     end
