@@ -1,4 +1,4 @@
-# rubocop:disable Style/GuardClause, Metrics/PerceivedComplexity
+# rubocop:disable Style/GuardClause
 
 module VotesHelper
   def most_voted(most_voted)
@@ -14,6 +14,7 @@ module VotesHelper
     end
     list.html_safe
   end
+
   def vote_unvote_btn(article, category, hos)
     unless current_user.nil?
       @vote = Vote.find_by(article: article, user: current_user)
@@ -48,4 +49,4 @@ module VotesHelper
     end
   end
 end
-# rubocop:enable Style/GuardClause, Metrics/PerceivedComplexity
+# rubocop:enable Style/GuardClause

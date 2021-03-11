@@ -1,21 +1,5 @@
 module ArticlesHelper
-  def categories_index(categories)
-    list = ''
-    categories.each do |category|
-      next if category.articles.first.nil?
-
-      list += "<div class='article_image' style= 'background-image:
-                              linear-gradient(
-                              rgba(0, 0, 0, 0.5),
-                              rgba(0, 0, 0, 0.5)),
-                              url(\"#{article_grid_image(category)}\")'>"
-      list += '<div>'
-      list += "<h2>#{link_to category.name, category_path(category), class: 'cl-lg'}</h2>"
-      list += "<h2 class='cl-lg'>article name:     #{category.articles.ordered_by_most_recent.first.title}</h2>"
-      list += '</div> </div>'
-    end
-    list.html_safe
-  end
+  
 
   def image_article(article)
     list = "<div class='image_article'>"
@@ -42,9 +26,9 @@ module ArticlesHelper
               '<p> You can be the first vote </p>'
             end
     list += "<div class=vote> #{vote_unvote_btn(article, @category.id, hos)} '</div> "
-    list += "<p> #{link_to 'Edit', edit_article_path(article)}</p>" if article.user==current_user
+    list += "<p> #{link_to 'Edit', edit_article_path(article)}</p>" if article.user == current_user
     list += "</div>'"
-       
+
     list
   end
 
