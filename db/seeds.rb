@@ -63,7 +63,7 @@ cat1 = Article.create!(
   
   ',
   user_id: 2,
-  image_url: '/assets/yakuza-0.jpg',
+  image_url: 'yakuza-0.jpg',
   category_ids: [1, 3]
 )
 
