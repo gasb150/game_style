@@ -6,72 +6,48 @@ $primary-color: #f9a02e;
 $primary-color-light: #fff;
 $primary-color-text: #212121;
 $primary-color-attenuated: #736e69;
-
-.new_article {
-  font-size: 3vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  .form-inputs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .required {
-      font-size: 3vw;
-    }
-
-    .input {
-      .string {
-        height: auto;
-        width: 30vw;
-        margin: 5%;
-      }
-
-      textarea[name="article[text]"] {
-        height: 30vw;
-        width: 60vw;
-        margin: 5%;
-      }
-
-      label[for=article_title] {
-        text-align: center;
-        align-items: center;
-        margin: auto;
-        border-bottom: $primary-color-dark solid 5px;
-        color: $primary-color-dark;
-        width: auto;
-      }
-    }
-
-    .article_title,
-    .article_text {
-      display: flex;
-      flex-direction: column;
-      label[for=article_text] {
-        align-items: center;
-        text-align: center;
-        margin: auto;
-        border-bottom: $primary-color-dark solid 5px;
-        color: $primary-color-dark;
-      }
-
-    }
-
-    .form-control {
-      color: $primary-color-light;
-    }
+.new-article{
+  a {
+    color: $primary-color;
+    border-bottom: $primary-color 2px solid;
   }
-
-  .category_select {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 40vw;
-    left: 4vw;
-    font-size: 2.5vw;
-  }
-
 }
+.new_article, .edit_article {
+  
+//   font-size: 3vw;
+   display: flex;
+   flex-direction: column;
+   //align-items: center;
+//   width: 100%;
+margin: 0 20%;
+.form-inputs{
+  
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  row-gap: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  .article-input{
+    
+    .article_title, 
+    .article_text{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .article_text{
+  height: 200px;
+  }
+  
+  }
+  .image_upload{
+    justify-self: center;
+  }
+}
+.field .category_select {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 5% 0;
+  gap: 5px;
+  
+}
+ }

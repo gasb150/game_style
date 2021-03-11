@@ -1,8 +1,14 @@
 $primary-color-dark: #f46326;
 $primary-color-light: #fff;
+$primary-color: #f9a02e;
 
 .log_user,
-.singup_user {
+.singup_user
+.new_article {
+  a{
+    color: $primary-color;
+    border-bottom: $primary-color 2px solid;
+  }
   font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -10,7 +16,8 @@ $primary-color-light: #fff;
   align-items: center;
 
   .log-in-title,
-  .sing-up-title {
+  .sing-up-title,
+  .new_article h1 {
     margin-bottom: 2%;
     font-size: 5rem;
     border-bottom: 5px solid $primary-color-dark;
@@ -22,6 +29,9 @@ $primary-color-light: #fff;
 
   .required {
     font-size: 30px;
+  }
+  input{
+    border-radius: 10px;
   }
 
   label{
@@ -47,10 +57,9 @@ $primary-color-light: #fff;
   .form-actions,
   .user_name,
   .user_username,
-  .user_password_confirmation {
+  .user_password_confirmation{
     display: flex;
     flex-direction: column;
-    align-items: center;
     color: $primary-color-light;
 
    
@@ -67,9 +76,26 @@ $primary-color-light: #fff;
 }
 
 .singup_user {
-  font-size: 3vw;
 
   .sing-up-title {
     font-size: 3vw;
   }
-}
+
+  .new_user{
+    .form-inputs{
+     .signup_input_grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+     }
+      
+
+      label{
+        margin-top: 50px;
+      }
+    
+          
+      }
+    }
+  }
+

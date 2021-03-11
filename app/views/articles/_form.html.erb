@@ -4,12 +4,16 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <h2><%= f.input :title, class: 'article_title', placeholder: 'Yor title here' %></h2>
-    <h2><%= f.input :text, class:'article_text', placeholder: 'Write your article text...'%></h2>
-    <h2><%= f.file_field :image, class: 'form-control', direct_upload: true  %></h2>
+    <div class="article-input"><%= f.input :title, class: 'article_title', placeholder: 'Yor title here' %></div>
+    <div class="article-input"><%= f.input :text, class:'article_text', placeholder: 'Write your article text...'%></div>
+    <div class="article-input image_upload"><%= f.file_field :image, class: 'form-control', direct_upload: true  %></div>
   </div>
  
   <div class="field">
+  <div class="flex">
+  <abbr title="required">*</abbr>
+  <p class ="choose">Choose a category</p>
+  </div>
   <%= hidden_field_tag "article[category_ids][]", nil %>
   <div class="category_select">
   <%= article_select %>

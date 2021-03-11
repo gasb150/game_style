@@ -4,7 +4,15 @@ $primary-color-light: #fff;
 $primary-color-text: #212121;
 $primary-color-attenuated: #736e69;
 $primary-color-body: #4e443f;
-
+abbr{
+  color: #f46326;
+}
+.flex{
+  display: flex;
+}
+.grid{
+  display: grid;
+}
 body {
   min-height: 100vh;
   position: relative;
@@ -20,7 +28,7 @@ body {
 }
 
 .nav {
-  display: flex;
+  //display: flex;
   justify-content: space-between;
   padding: 1%;
   font-family: 'Roboto', sans-serif;
@@ -31,7 +39,7 @@ body {
   }
 
   .categories {
-    display: flex;
+    //display: flex;
     list-style: none;
     width: 50%;
     justify-content: space-around;
@@ -56,12 +64,12 @@ body {
 h1,
 h2 {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 p {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 h1,
@@ -98,42 +106,48 @@ footer {
 }
 
 .footer {
-  display: flex;
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   text-align: center;
   height: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 0 20px;
 
   .logo {
-    max-width: 20vw;
+    justify-self: start;
+    width: 40%;
   }
 
-  div {
-    width: 100%;
-
-    p {
-      align-self: center;
-    }
-
-    .iconify {
-      width: 30px;
-      height: 30px;
-      max-height: 10vw;
-    }
-
-    .radius {
-      border-radius: 50%;
-
-      path {
-        border-radius: 50%;
-      }
-    }
+ 
   }
 
   .privacy {
+    justify-self: stretch;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  .contact_us{
+    justify-self: end;
+  align-items: center;
+  align-self: stretch;
+  p{
+    width: 100%;
+  }
+    .iconify{
+      width: 30px;
+      height: 30px;
+      max-height: 10vw;
+    align-items: baseline;
+    .radius {
+      border-radius: 50%;
+
+  }
+  path {
+    border-radius: 50%;
+  }
+}
 }
 
 @media only screen and (max-width: 968px) {
@@ -149,8 +163,10 @@ footer {
 @media only screen and (max-width: 723px) {
   .footer {
     flex-direction: column;
+    align-items: center;
 
     .logo {
+      max-width: none;
       height: 15vw;
       max-height: none;
     }
