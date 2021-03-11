@@ -9,6 +9,7 @@
                 required: false,
                 autofocus: true,
                 input_html: { autocomplete: "email" } %>
+    
     <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
@@ -19,6 +20,7 @@
     <%= f.button :submit, "Log in" %>
   </div>
 <% end %>
-
+<div class="sign_forgot">
 <%= render "devise/shared/links" %>
+</div>
 </div>

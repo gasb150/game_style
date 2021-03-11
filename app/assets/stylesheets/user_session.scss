@@ -17,13 +17,30 @@ $primary-color-light: #fff;
   }
 
   .optional {
-    font-size: 18px;
+    font-size: 30px;
   }
 
   .required {
-    font-size: 15px;
+    font-size: 30px;
   }
 
+  label{
+    margin-top: 20%;
+    margin-bottom: 1%;
+  }
+  label[for="user_remember_me"]{
+    margin-top: 5%;
+  }
+  .sign_forgot{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+
+    *{
+      margin: 0 10%;
+    }
+  }
   .user_email,
   .user_password,
   .user_remember_me,
@@ -40,8 +57,11 @@ $primary-color-light: #fff;
   }
 }
 .btn, .button {
-  font-size: 15px;
+  margin-top: 5%;
+  margin-bottom: 20%;
+  font-size: 20px;
   padding: .5rem 1rem;
+  border-radius: 5px;
   background: $primary-color-dark;
   border: $primary-color-dark;
 }
