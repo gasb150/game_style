@@ -11,11 +11,11 @@ def user_nav()
     list += user_gravatar(current_user)
     list+="</div>"
     list +=link_to "Write new article #{current_user.username} ", new_article_path
-    list+="<div> | <div>"
+    list+="<div> | </div>"
     list+=link_to 'Sign out', destroy_user_session_path, method: :delete 
   else
     list=link_to 'Sign in', user_session_path
-    list+= "<div> | <div>"
+    list+="|"
     list+=link_to 'Register', new_user_registration_path
   end
   list.html_safe

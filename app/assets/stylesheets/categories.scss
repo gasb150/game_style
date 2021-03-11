@@ -29,6 +29,7 @@ $primary-color-attenuated: #736e69;
 
 .main_page {
   display: grid;
+  grid-template-rows: 2fr 1fr;
 
   .background {
     background-repeat: no-repeat;
@@ -37,7 +38,7 @@ $primary-color-attenuated: #736e69;
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
-    min-height: 400px;
+    min-height: 100%;
   }
 }
 
@@ -103,7 +104,8 @@ $primary-color-attenuated: #736e69;
       justify-content: space-between;
       box-sizing: border-box;
       padding: 2%;
-      width: 25vw;
+      max-width: 25vw;
+      width: 50%;
       background-color: $primary-color-light;
 
       .cat-name {
@@ -164,6 +166,14 @@ $primary-color-attenuated: #736e69;
 }
 
 @media only screen and (max-width: 723px) {
+  .main_page {
+    grid-template-rows:none;
+    .background{
+      min-height: 400px;
+    }
+
+  }
+  
   .category_grid {
     grid-template-columns: repeat(1, 1fr);
 

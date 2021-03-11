@@ -3,7 +3,7 @@ $primary-color-light: #fff;
 
 .log_user,
 .singup_user {
-  font-size: 5vw;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,16 +11,17 @@ $primary-color-light: #fff;
 
   .log-in-title,
   .sing-up-title {
-    font-size: 5vw;
+    margin-bottom: 2%;
+    font-size: 5rem;
     border-bottom: 5px solid $primary-color-dark;
   }
 
   .optional {
-    font-size: 5vw;
+    font-size: 18px;
   }
 
   .required {
-    font-size: 3vw;
+    font-size: 15px;
   }
 
   .user_email,
@@ -35,13 +36,14 @@ $primary-color-light: #fff;
     align-items: center;
     color: $primary-color-light;
 
-    .btn {
-      font-size: 30px;
-      width: 50%;
-      background: $primary-color-dark;
-      border: $primary-color-dark;
-    }
+   
   }
+}
+.btn, .button {
+  font-size: 15px;
+  padding: .5rem 1rem;
+  background: $primary-color-dark;
+  border: $primary-color-dark;
 }
 
 .singup_user {
