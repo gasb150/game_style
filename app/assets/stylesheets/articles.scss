@@ -8,17 +8,19 @@ $primary-color-text: #212121;
 $primary-color-attenuated: #736e69;
 
 .new-article {
- 
   a {
     color: $primary-color;
     border-bottom: $primary-color 2px solid;
   }
-  input, textarea{
+
+  input,
+  textarea {
     border-radius: 5px;
     font-size: 20px;
   }
-  .form-actions{
-      text-align: center;
+
+  .form-actions {
+    text-align: center;
   }
 }
 
