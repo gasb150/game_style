@@ -34,7 +34,7 @@ And also this webpage it's responsive.
 
 ## :wrench: Getting Started
 > Take a copy of this project locally
-[Video_step]
+[Video_step](https://www.loom.com/share/3d78234501a34256a7379126c85be265)
 - Go to the main page of the repo.
 - Press the "Code" button and get the repo link.
 - Clone it using git clone. 
