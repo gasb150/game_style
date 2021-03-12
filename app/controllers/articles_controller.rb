@@ -12,10 +12,8 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
- 
   def edit; end
 
- 
   def create
     @article = current_user.articles.new(article_params)
     respond_to do |format|
@@ -42,7 +40,6 @@ class ArticlesController < ApplicationController
       end
     end
   end
-
 
   def destroy
     @article.destroy
