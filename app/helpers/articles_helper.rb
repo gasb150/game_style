@@ -4,7 +4,7 @@ module ArticlesHelper
     list += if !article.image.nil?
               "<img src=\"#{article_image(article)}\">"
             else
-              image_tag(url_for(article_image(article)))
+              "<img src=\"#{article_image(article)}\">"
             end
     list += '</div>'
     list
