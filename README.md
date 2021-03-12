@@ -30,7 +30,7 @@ And also this webpage it's responsive.
 
 ## Live Demo
 
-[GameStyle](https://ancient-peak-99624.herokuapp.com/)
+[GameStyle](https://shrouded-escarpment-15877.herokuapp.com/)
 
 ## :wrench: Getting Started
 > Take a copy of this project locally
