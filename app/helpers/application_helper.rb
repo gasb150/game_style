@@ -55,7 +55,7 @@ module ApplicationHelper
     if category.articles.ordered_by_most_recent.first.image.attached?
       cloudinary_url(category.articles.ordered_by_most_recent.first.image.key)
     elsif category.articles.ordered_by_most_recent.first.image_url
-      url_for(category.articles.ordered_by_most_recent.first.image_url)
+      image_url(category.articles.ordered_by_most_recent.first.image_url)
     else
       '/assets/default.jpeg'
     end
