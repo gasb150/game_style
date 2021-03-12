@@ -1,4 +1,3 @@
-# rubocop:disable Style/GuardClause
 module ApplicationHelper
   def create_article(_article)
     list = ''
@@ -25,20 +24,21 @@ module ApplicationHelper
     list.html_safe
   end
 
-  def notice_message(notice, alert)
+  def notice_message()
     list = ''
     if notice.present?
       list += "<div class='notice'>"
       list += "<p class='cl-og'> #{notice} </p>"
       list += '</div>'
-      list.html_safe
+
     end
     if alert.present?
       list += "<div class='alert'>"
       list += "<p class='cl-og'> #{alert} </p>"
       list += '</div>'
-      list.html_safe
+
     end
+    list.html_safe
   end
 
   def article_image(article)
@@ -61,4 +61,3 @@ module ApplicationHelper
     end
   end
 end
-# rubocop:enable Style/GuardClause

@@ -13,7 +13,7 @@ RSpec.describe 'Display category page', type: :feature do
     fill_in 'Title', with: 'test-title'
     fill_in 'Text', with: 'test-text'
     check 'category_1'
-    attach_file('article[image]', './app/assets/images/default.jpeg')
+    attach_file('article[image]', './app/assets/images/default.jpg')
     click_on 'Create Article'
   end
   scenario 'Visit root_path' do

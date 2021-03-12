@@ -13,7 +13,7 @@ RSpec.describe 'Display votes button', type: :feature do
     fill_in 'Title', with: 'test-title'
     fill_in 'Text', with: 'test-text'
     check 'category_1'
-    attach_file('article[image]', './app/assets/images/default.jpeg')
+    attach_file('article[image]', './app/assets/images/default.jpg')
     click_on 'Create Article'
     visit category_path(1)
     find('.vote_show').click

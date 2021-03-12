@@ -17,7 +17,7 @@ RSpec.describe 'create new article with info', type: :feature do
     fill_in 'Title', with: 'test-title'
     fill_in 'Text', with: 'test-text'
     check 'category_1'
-    attach_file('article[image]', './app/assets/images/default.jpeg')
+    attach_file('article[image]', './app/assets/images/default.jpg')
     click_on 'Create Article'
     expect(page).to have_content('Article was successfully created.')
   end
@@ -27,7 +27,7 @@ RSpec.describe 'create new article with info', type: :feature do
     fill_in 'Title', with: 'test-title'
     fill_in 'Text', with: ''
     check 'category_1'
-    attach_file('article[image]', './app/assets/images/default.jpeg')
+    attach_file('article[image]', './app/assets/images/default.jpg')
     click_on 'Create Article'
     expect(page).to have_content('Please review the problems below:')
   end
@@ -36,7 +36,7 @@ RSpec.describe 'create new article with info', type: :feature do
     fill_in 'Title', with: ''
     fill_in 'Text', with: 'test-text'
     check 'category_1'
-    attach_file('article[image]', './app/assets/images/default.jpeg')
+    attach_file('article[image]', './app/assets/images/default.jpg')
     click_on 'Create Article'
     expect(page).to have_content('Please review the problems below:')
   end
@@ -44,7 +44,7 @@ RSpec.describe 'create new article with info', type: :feature do
     visit new_article_path
     fill_in 'Title', with: 'test-title'
     fill_in 'Text', with: 'test-text'
-    attach_file('article[image]', './app/assets/images/default.jpeg')
+    attach_file('article[image]', './app/assets/images/default.jpg')
     click_on 'Create Article'
     expect(page).to have_content('Please review the problems below:')
   end
