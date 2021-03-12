@@ -119,8 +119,16 @@ And we need to migrate the database to
 Run this command
 ```
 1 | heroku run rails db:migrate
-2 | heroku run rails db:seed
 ```
+then go to app/models/article.rb and disable  validates :image, presence: true
+must looks like 
+>  #validates :image, presence: true
+```
+1 | heroku run rails db:seed
+```
+and now enable again the disable validation
+must looks like:
+>  validates :image, presence: true
 2.5. Enjoy this app
 ```
 1 | heroku open
