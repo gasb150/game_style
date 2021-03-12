@@ -57,8 +57,17 @@ Open the terminal in the current project folder and then
 ```
    1 | rails db:create
    2 | rails db:migrate
-   3 | rails db:seed
 ```
+then go to app/models/article.rb and disable  validates :image, presence: true
+must looks like 
+>  #validates :image, presence: true
+```
+1 | rails db:seed
+```
+and now enable again the disable validation
+must looks like:
+>  validates :image, presence: true
+
 ### Github Actions
 
 To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
