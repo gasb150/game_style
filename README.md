@@ -7,11 +7,11 @@ Each page uses the same top menu and footer, include links to pages that are imp
   
 List all categories in order of priority. Displayed as a square with its name on the top and its most recent article's title at the bottom. The background image is the image of the most recent article in this category.
 
-   <img src="./app/assets/images/Home.jpeg">
+   <img src="./app/assets/images/Home.jpg">
 
 
 When the user clicks the category name they can see all articles in that category, will see articles are sorted by most recent, each article displays an image, title, truncated text as a preview, and its author username, with a button to add a vote for article (each user can vote only once).
-    <img src="./app/assets/images/Article_section.jpeg">
+    <img src="./app/assets/images/Article_section.jpg">
 
 When the user opens the Write an article page:
 A form with all necessary fields is displayed.
@@ -21,7 +21,7 @@ And also this webpage it's responsive.
 
 ## :video_camera: Video description
 
-[Video GameStyle](https://www.loom.com/share/dde557e117144f89938201ab54a0533b)
+[Video GameStyle](https://www.loom.com/share/f24a1f7dbd344bd5aafa086e87084de8)
 
 ## :computer: Built With
 
@@ -34,7 +34,7 @@ And also this webpage it's responsive.
 
 ## :wrench: Getting Started
 > Take a copy of this project locally
-
+[Video_step]
 - Go to the main page of the repo.
 - Press the "Code" button and get the repo link.
 - Clone it using git clone. 
