@@ -1,6 +1,4 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+
 $primary-color-dark: #f46326;
 $primary-color: #f9a02e;
 $primary-color-light: #fff;
@@ -27,11 +25,9 @@ $primary-color-attenuated: #736e69;
 .new_article,
 .edit_article {
 
-  //   font-size: 3vw;
   display: flex;
   flex-direction: column;
-  //align-items: center;
-  //   width: 100%;
+
   margin: 0 20%;
 
   .form-inputs {
