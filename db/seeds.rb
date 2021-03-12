@@ -14,38 +14,46 @@ Category.create!(
   name: 'Adventure',
   priority: 5
 )
+
 Category.create!(
   name: 'Role-playing',
   priority: 3
 )
+
 Category.create!(
   name: 'Simulation',
   priority: 4
 )
+
 Category.create!(
   name: 'Strategy',
   priority: 7
 )
+
 Category.create!(
   name: 'Sports',
   priority: 6
 )
+
 Category.create!(
   name: 'MMO',
   priority: 2
 )
+
 user1= User.create(
   email:'gustave@email.com',
   password: 'password1',
   name: 'Gustave',
   username: 'Tave'
 )
+
 user2= User.create(
   email:'gustavo@email.com',
   password: 'password2',
   name: 'Gustavo',
   username: 'Tavo'
 )
+
 user3= User.create(
   email:'adolfito@email.com',
   password: 'password3',
@@ -74,7 +82,6 @@ cat2 = Article.create!(
   image_url: 'Grim_Fandango.jpg',
   category_ids: [1, 2]
 )
-
 
 cat3 = Article.create!(
   title: 'Final Fantasy 14',
@@ -126,8 +133,6 @@ cat4 = Article.create!(
   category_ids: [2, 5]
 )
 
-
-
 cat1 = Article.create!(
   title: 'The Elder Scrolls V: Skyrim',
   text: 'The Elder Scrolls 5: Skyrim has become the quintessential western RPG, having been released on nearly every platform under the sun since its original release in 2011, the most recent of which sees it grace Nintendo Switch. ',
@@ -135,7 +140,6 @@ cat1 = Article.create!(
   image_url: 'ElderScroll.jpg',
   category_ids: 3
 )
-
 
 cat2 = Article.create!(
   title: 'Dragon Age: Inquisition',
@@ -185,11 +189,6 @@ cat4 = Article.create!(
   category_ids: 4
 )
 
-
-
-
-
-
 cat1 = Article.create!(
   title: 'FIFA 21',
   text: "Ultimate Team features 100 icon players, including 11 new names. Eric Cantona, Petr Čech, Ashley Cole, Samuel Eto'o, Philipp Lahm, Ferenc Puskás, Bastian Schweinsteiger, Davor Šuker, Fernando Torres, Nemanja Vidić, and Xavi all feature as icons for the first time. Jens Lehmann will not be an icon in FUT 21.
@@ -218,6 +217,7 @@ cat3 = Article.create!(
   image_url: 'UFC_3.png',
   category_ids: 6
 )
+
 cat4 = Article.create!(
   title: 'MLB The Show 19',
   text: 'MLB The Show 19 comes packed with an abundance of game modes that are sure to keep even the biggest of baseball fans busy. This includes a new Moments mode in which players can recreate and even alter the greatest moments in baseball history as they control iconic athletes like Willie Mays, Lou Gehrig, and Ty Cobb.',
@@ -225,7 +225,6 @@ cat4 = Article.create!(
   image_url: 'MLB_19.jpg',
   category_ids: 6
 )
-
 
 cat2 = Article.create!(
   title: 'Dofus',
@@ -244,6 +243,7 @@ cat3 = Article.create!(
   image_url: 'metin2.jpg',
   category_ids: 7
 )
+
 cat4 = Article.create!(
   title: 'League of Legends',
   text: "League of Legends is a 2009 multiplayer online battle arena video game developed and published by Riot Games. Inspired by Defense of the Ancients, a custom map for Warcraft III, Riot's founders sought to develop a stand-alone game in the same genre. Since its release in October 2009, the game has been free-to-play, and is monetized through purchasable character customization. The game is available for Microsoft Windows and macOS.",
@@ -251,7 +251,6 @@ cat4 = Article.create!(
   image_url: 'lol.jpg',
   category_ids: 7
 )
-
 
 vote1 = Vote.create!(
   user_id: 1,
@@ -264,36 +263,43 @@ vote2 = Vote.create!(
   article_id: 2,
   category_id: 1
 )
+
 vote3 = Vote.create!(
   user_id: 1,
   article_id: 3,
   category_id: 1
 )
+
 vote4 = Vote.create!(
   user_id: 1,
   article_id: 4,
   category_id: 1
 )
+
 vote5 = Vote.create!(
   user_id: 1,
   article_id: 5,
   category_id: 2
 )
+
 vote6 = Vote.create!(
   user_id: 1,
   article_id: 6,
   category_id: 2
 )
+
 vote7 = Vote.create!(
   user_id: 1,
   article_id: 7,
   category_id: 2
 )
+
 vote8 = Vote.create!(
   user_id: 1,
   article_id: 8,
   category_id: 2
 )
+
 vote9 = Vote.create!(
   user_id: 2,
   article_id: 8,
