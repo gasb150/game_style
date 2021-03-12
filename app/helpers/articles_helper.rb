@@ -1,7 +1,7 @@
 module ArticlesHelper
   def image_article(article)
     list = "<div class='image_article'>"
-    "<img src=\"#{article_image(article)}\">"
+    list +="<img src=\"#{article_image(article)}\">"
     list += '</div>'
     list
   end
