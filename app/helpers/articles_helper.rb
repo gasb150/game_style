@@ -1,11 +1,7 @@
 module ArticlesHelper
   def image_article(article)
     list = "<div class='image_article'>"
-    list += if !article.image.nil?
-              "<img src=\"#{article_image(article)}\">"
-            else
-              "<img src=\"#{article_image(article)}\">"
-            end
+    "<img src=\"#{article_image(article)}\">"
     list += '</div>'
     list
   end
