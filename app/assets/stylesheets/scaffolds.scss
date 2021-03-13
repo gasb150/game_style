@@ -1,0 +1,188 @@
+$primary-color-dark: #f46326;
+$primary-color: #f9a02e;
+$primary-color-light: #fff;
+$primary-color-text: #212121;
+$primary-color-attenuated: #736e69;
+$primary-color-body: #4e443f;
+
+abbr {
+  color: #f46326;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-color: $primary-color-body;
+}
+
+.logo {
+  max-height: 5vw;
+
+  img {
+    height: 100%;
+  }
+}
+
+.nav {
+  justify-content: space-between;
+  padding: 1%;
+  font-family: 'Roboto', sans-serif;
+  background-color: $primary-color-light;
+
+  .logo {
+    width: 10%;
+  }
+
+  .categories {
+    list-style: none;
+    width: 50%;
+    justify-content: space-around;
+    height: min-content;
+    align-self: center;
+  }
+}
+
+.user_nav {
+  div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .avatar img {
+    border-radius: 50%;
+    width: 4vw;
+  }
+}
+
+h1,
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+}
+
+h1,
+h2,
+p {
+  padding: 1%;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color-attenuated;
+}
+
+.cl-at {
+  color: $primary-color-attenuated;
+}
+
+.cl-og {
+  color: $primary-color-dark;
+}
+
+.cl-lg {
+  color: $primary-color-light;
+}
+
+footer {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  max-height: 30vw;
+  height: 50px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  height: 100%;
+  justify-content: space-around;
+  margin: 0 20px;
+
+  .logo {
+    justify-self: start;
+    width: 40%;
+  }
+}
+
+.privacy {
+  justify-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact_us {
+  justify-self: end;
+  align-items: center;
+  align-self: stretch;
+
+  p {
+    width: 100%;
+  }
+
+  .iconify {
+    width: 30px;
+    height: 30px;
+    max-height: 10vw;
+    align-items: baseline;
+
+    .radius {
+      border-radius: 50%;
+    }
+
+    path {
+      border-radius: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .nav {
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 723px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+      max-width: none;
+      height: 15vw;
+      max-height: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .nav {
+    flex-direction: column;
+
+    .logo {
+      height: 15vw;
+      max-height: none;
+    }
+  }
+}

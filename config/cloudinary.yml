@@ -1,0 +1,18 @@
+development:
+  cloud_name: bird7
+  api_key: '696843328756964'
+  api_secret: "-uJ4PlbZn3qCaTqSJe0Xuw8ihT4"
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: bird7
+  api_key: '696843328756964'
+  api_secret: "-uJ4PlbZn3qCaTqSJe0Xuw8ihT4"
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: bird7
+  api_key: '696843328756964'
+  api_secret: "-uJ4PlbZn3qCaTqSJe0Xuw8ihT4"
+  enhance_image_tag: true
+  static_file_support: false

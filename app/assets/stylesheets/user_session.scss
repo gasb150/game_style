@@ -1,0 +1,100 @@
+$primary-color-dark: #f46326;
+$primary-color-light: #fff;
+$primary-color: #f9a02e;
+
+.log_user,
+.singup_user {
+  a {
+    color: $primary-color;
+    border-bottom: $primary-color 2px solid;
+  }
+
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .log-in-title,
+  .sing-up-title,
+  .new_article h1 {
+    margin-bottom: 2%;
+    font-size: 5rem;
+    border-bottom: 5px solid $primary-color-dark;
+  }
+
+  .optional {
+    font-size: 30px;
+  }
+
+  .required {
+    font-size: 30px;
+  }
+
+  input {
+    border-radius: 10px;
+  }
+
+  label {
+    margin-top: 20%;
+    margin-bottom: 1%;
+  }
+
+  label[for="user_remember_me"] {
+    margin-top: 5%;
+  }
+
+  .sign_forgot {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+
+    * {
+      margin: 0 10%;
+    }
+  }
+
+  .user_email,
+  .user_password,
+  .user_remember_me,
+  .form-actions,
+  .user_name,
+  .user_username,
+  .user_password_confirmation {
+    display: flex;
+    flex-direction: column;
+    color: $primary-color-light;
+  }
+}
+
+.btn,
+.button {
+  margin-top: 5%;
+  margin-bottom: 20%;
+  font-size: 20px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background: $primary-color-dark;
+  border: $primary-color-dark;
+}
+
+.singup_user {
+  .sing-up-title {
+    font-size: 3vw;
+  }
+
+  .new_user {
+    .form-inputs {
+      .signup_input_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+      }
+
+      label {
+        margin-top: 50px;
+      }
+    }
+  }
+}
