@@ -1,23 +1,23 @@
 ### GAME STYLE
 
-I create a rails app, according to [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) design [liFEsTlye](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version), the user logs in to the app, the user is presented with the homepage
+I create a rails app using [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) [liFEsTlye](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version).
+When the user logs in to the app, he is going to redirect to the homepage.
+Each page uses the same top menu and footer, include links to implemented pages: Home, articles categories, write an article, and sing out. Display a featured article in the first row of the home page, which has the highest number of votes, with a full-width image and title.
 
-Each page uses the same top menu and footer, include links to pages that are implemented: Home, articles categories, write an article, and sing out. with a featured article, with the biggest number of votes, with a full-width image and title in the first row of the home page.
-
-  
-List all categories in order of priority. Displayed as a square with its name on the top and its most recent article's title at the bottom. The background image is the image of the most recent article in this category.
+List all categories in order of priority, displayed as a square with its name on the top and its most recent article's title at the bottom. The background image is the image of the most recent article in this category.
 
    <img src="./app/assets/images/Home.jpg">
 
 
-When the user clicks the category name they can see all articles in that category, will see articles are sorted by most recent, each article displays an image, title, truncated text as a preview, and its author username, with a button to add a vote for article (each user can vote only once).
+When the user clicks in the category name, he will see all the articles in that category, sorted by most recent. 
+Each article has an image, a title, a truncated text as a preview, and its author username, with a button to add a vote for the article (each user can vote only once).
     <img src="./app/assets/images/Article_section.jpg">
 
+
 When the user opens the Write an article page:
-A form with all necessary fields is displayed.
+Display a form with all necessary fields.
 
-
-And also this webpage it's responsive.
+And this webpage is also responsive.
 
 ## :video_camera: Video description
 
@@ -33,7 +33,7 @@ And also this webpage it's responsive.
 [GameStyle](https://shrouded-escarpment-15877.herokuapp.com/)
 
 ## :wrench: Getting Started
-> Take a copy of this project locally
+> Take a copy of this project
 [Video_step](https://www.loom.com/share/3d78234501a34256a7379126c85be265)
 - Go to the main page of the repo.
 - Press the "Code" button and get the repo link.
@@ -64,18 +64,18 @@ must looks like
 ```
 1 | rails db:seed
 ```
-and now enable again the disable validation
-must looks like:
+and now re-enable the disable validation
+must look like:
 >  validates :image, presence: true
 
 ### Github Actions
 
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
+To make sure the linters' checks using Github Actions works, you should follow the following steps:
 
 1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
 2. Create the `feature/branch` and push.
 3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
+4. When your work is complete, open a PR from the "feature/branch".
 
 ### Usage
 
@@ -96,7 +96,7 @@ Open `http://localhost:3000/` in your browser.
 ### Deployment
 
 To deploy it, you can use Heroku. 
-1. First you will need a Heroku account and set-up for deployment.
+1. First, you will need a Heroku account and set-up for deployment.
 1.1. Go to the [heroku website](https://www.heroku.com/) and create an account using the same email address you used for GitHub and Git.
 1.2. Run this command 
   ```
@@ -106,8 +106,8 @@ To deploy it, you can use Heroku.
   ```
   1 | heroku keys:add
   ```
-press y and then Enter, and now, type in the email address you used to create your Heroku account and press Enter. Then, type in the password for your Heroku account. Next, press y and Enter to allow Heroku to upload your public SSH key.
-1.4. The terminal may read Invalid credentials provided. Just press any key and the Heroku website will open in your browser. Log in with the information you created your account with, and the terminal will reappear and accept your public SSH key.
+Press y and then Enter, and now, type in the email address you used to create your Heroku account and press Enter. Then, type in the password for your Heroku account. Next, press y and Enter to allow Heroku to upload your public SSH key.
+1.4. The terminal may read Invalid credentials provided. Press any key, and the Heroku website will open in your browser. Log in with the information you created your account with, and the terminal will reappear and accept your public SSH key.
 
 2. Once you complete the first step.
 2.1. Run this command
@@ -130,13 +130,13 @@ Run this command
 1 | heroku run rails db:migrate
 ```
 then go to app/models/article.rb and disable  validates :image, presence: true
-must looks like 
+must look like 
 >  #validates :image, presence: true
 ```
 1 | heroku run rails db:seed
 ```
 and now enable again the disable validation
-must looks like:
+must look like:
 >  validates :image, presence: true
 2.5. Enjoy this app
 ```
