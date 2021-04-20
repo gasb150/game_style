@@ -28,16 +28,71 @@ $primary-color-attenuated: #736e69;
 .main_page {
   display: grid;
   grid-template-rows: 2fr 1fr;
-
+  .most_voted{
+    display: flex;
+   
   .background {
+    box-sizing: border-box;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column-reverse;
-    width: 100%;
+    width: 75%;
     min-height: 100%;
   }
+
+  #weather{
+    color: white;
+    box-sizing: border-box;
+    width: 25%;
+    background-color: #f46326;
+    background-image: 
+      linear-gradient(
+                              rgba(0, 0, 0, 0.5),
+                              rgba(0, 0, 0, 0.5)), 
+                              asset_url("minecraft-529464_1280.jpg")
+                            
+                              
+    } 
+    
+
+    #cityName{
+      font-size: 1.5rem;
+      padding: .5rem;
+    }
+
+    .icons{
+      display: flex;
+      padding-top: 30%;
+      margin-left: 10%;
+
+      #cloud .w-icon{
+        font-size: 10rem;
+      }
+
+      #temp{
+        position: relative;
+        right: 2.5rem;
+        bottom: 1rem;
+        font-size: 2rem;
+      }
+      #humidity{
+        position: relative;
+        right: 4rem;
+        bottom: -8rem;
+       
+        div{
+          font-size: 2rem;
+          display: flex;
+        p{
+          font-size: 2rem;
+        }
+        }
+      }
+    }
+  }
+
 }
 
 .category_grid {

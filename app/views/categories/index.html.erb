@@ -5,8 +5,26 @@
 <div class="main_page">
   <div class="most_voted">
     <%= most_voted(@most_voted) %>
+    <div id="weather">
+    <h6 id="cityName" >    
+    </h6>
+    <div class="icons">
+    <h6 id="cloud">
+    </h6>
+    <h6 id="temp">
+    </h6>
+  
+    <h6 id="humidity">
+    </h6>
+    </div>
+
+    </div>
   </div>
   <div class="category_grid">
   <%= categories_index(@categories_priory) %> 
 </div>
 </div>
+
+
+<%= javascript_pack_tag 'carrusel'%>
+<%= javascript_pack_tag 'weather', async:true %>
