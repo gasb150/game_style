@@ -154,6 +154,9 @@ footer {
 }
 
 @media only screen and (max-width: 968px) {
+    h2 {
+    font-size: 12px;
+  }
   .nav {
     .categories {
       display: grid;

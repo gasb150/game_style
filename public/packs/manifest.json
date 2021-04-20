@@ -42,23 +42,23 @@
     },
     "icons": {
       "js": [
-        "/packs/js/icons-e51e2465c14f914225ff.js"
+        "/packs/js/icons-891488e1140ed15b0b4e.js"
       ],
       "js.map": [
-        "/packs/js/icons-e51e2465c14f914225ff.js.map"
+        "/packs/js/icons-891488e1140ed15b0b4e.js.map"
       ]
     },
     "weather": {
       "js": [
-        "/packs/js/weather-bace4416d8b2cfd09c9b.js"
+        "/packs/js/weather-563767f0914b0d4ce1e3.js"
       ],
       "js.map": [
-        "/packs/js/weather-bace4416d8b2cfd09c9b.js.map"
+        "/packs/js/weather-563767f0914b0d4ce1e3.js.map"
       ]
     }
   },
-  "icons.js": "/packs/js/icons-e51e2465c14f914225ff.js",
-  "icons.js.map": "/packs/js/icons-e51e2465c14f914225ff.js.map",
-  "weather.js": "/packs/js/weather-bace4416d8b2cfd09c9b.js",
-  "weather.js.map": "/packs/js/weather-bace4416d8b2cfd09c9b.js.map"
+  "icons.js": "/packs/js/icons-891488e1140ed15b0b4e.js",
+  "icons.js.map": "/packs/js/icons-891488e1140ed15b0b4e.js.map",
+  "weather.js": "/packs/js/weather-563767f0914b0d4ce1e3.js",
+  "weather.js.map": "/packs/js/weather-563767f0914b0d4ce1e3.js.map"
 }

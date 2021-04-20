@@ -1,18 +1,22 @@
 import Weather from './apiWeather';
 import Location from './apiLocation';
 import Icons from './icons'
-const loadPage = ( (t) => {
+const loadPage = ( () => {
 
-    const load = async (t) => {
-        console.log(t)
-   
+    const load = async () => {
+      
+      
         const locData = await Location().then((response => {
          
-            const cityName = response.city;
-
-            return cityName;
-        }))
+             const city = response.city;
+             return city;
+         })
+        ).catch(err => {
+            console.log(err)
+        })
         
+ 
+
         let cityInput = locData;
       
 
@@ -25,7 +29,7 @@ const loadPage = ( (t) => {
 
       
         
-        cityName.innerHTML = data.name
+        cityName.innerHTML = data.name +', ' + data.sys.country
         cityTemp.innerHTML = ` ${Math.round(tempValue - 273.15, -1)}°C`;
         cityCloud.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png"> </img>`
         cityCloud.innerHTML = `<p class="w-icon"> ${Icons(data)} </p>`
@@ -36,6 +40,5 @@ const loadPage = ( (t) => {
       load()
      
 });
-console.log('sssllll')
+
 loadPage()
-console.log('sssllll')
