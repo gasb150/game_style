@@ -34,7 +34,7 @@ module ArticlesHelper
   end
 
   def article_s_f(article, hos)
-    list = info_article(article, hos) 
+    list = info_article(article, hos)
     list += image_article(article)
 
     list
