@@ -1,40 +1,36 @@
 <div class="singup_user">
-<h2 class="sing-up-title cl-og">Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-  <div class="signup_input_grid">
-  <%= f.input :name,
+  <h2 class="sing-up-title cl-og">Sign up</h2>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <div class="signup_input_grid">
+        <%= f.input :name,
   required: true,
   autofocus: true,
   input_html: { autocomplete: "name" }%>
-<%= f.input :username,
+        <%= f.input :username,
   required: true,
   input_html: { autocomplete: "username" }%>
-  </div>
-    <%= f.input :email,
+      </div>
+      <%= f.input :email,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email",
                 }%>
-                <div class= "signup_input_grid">
-    <%= f.input :password,
+      <div class= "signup_input_grid">
+        <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
+        <%= f.input :password_confirmation,
                 label: :"Confirm your password", 
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-                </div>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up" %>
+    </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
 </div>

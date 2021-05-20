@@ -1,21 +1,13 @@
 <nav class="nav flex">
-<div class="logo"> <img src="https://raw.githubusercontent.com/gasb150/game_style/feature-v2/app/assets/images/logo.jpg"> </div>
-
-<div class="categories flex">
+  <div class="logo"> <img src="https://raw.githubusercontent.com/gasb150/game_style/feature-v2/app/assets/images/logo.jpg"> </div>
+  <div class="categories flex">
     <%= link_to 'Home', root_path , class: "cl-og" %>
-    
     <%= category_nav %>
   </div>
-
-
   <div class="user_nav">
-  <div class="cl-at">
- <%= user_nav() %>
- </div>
- </div>
+    <div class="cl-at">
+      <%= user_nav() %>
+    </div>
+  </div>
 </nav>
 <%= notice_message() %>
-
-
-
-  

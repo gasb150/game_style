@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+
   def index
     show_category
     @categories_priory = Category.all.order(:priority).limit(5)
@@ -13,8 +14,11 @@ class CategoriesController < ApplicationController
   end
 
   private
-
+  
   def show_category
     @categories = Category.all.order(:id)
   end
+
+  package = Axlsx::Package.new
+  workbook = package.workbook
 end
