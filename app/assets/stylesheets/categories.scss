@@ -1,4 +1,3 @@
-
 $primary-color-dark: #f46326;
 $primary-color: #f9a02e;
 $primary-color-light: #fff;
@@ -23,52 +22,6 @@ $primary-color-attenuated: #736e69;
 
 .cl-yl {
   color: $primary-color;
-}
-
-.main_page {
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-
-  .background {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    min-height: 100%;
-  }
-}
-
-.category_grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-
-  .article_image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-sizing: border-box;
-    height: 18vw;
-    border: 5px solid rgba(0, 0, 0, 0.5);
-
-    div {
-      display: flex;
-      box-sizing: border-box;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 90%;
-
-      a {
-        text-decoration: none;
-        border-bottom: yellow 2px solid;
-      }
-    }
-  }
-
-  .article_image:hover {
-    box-sizing: border-box;
-    border: 5px solid $primary-color-dark;
-  }
 }
 
 .articles_cat_grid {
@@ -118,11 +71,137 @@ $primary-color-attenuated: #736e69;
   }
 }
 
+.category_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  .article_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 18vw;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+
+    div {
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+
+      a {
+        text-decoration: none;
+        border-bottom: yellow 2px solid;
+      }
+    }
+  }
+
+  .article_image:hover {
+    box-sizing: border-box;
+    border: 5px solid $primary-color-dark;
+  }
+}
+
+.main_page {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+
+  .most_voted {
+    display: flex;
+
+    .background {
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column-reverse;
+      width: 75%;
+      min-height: 100%;
+    }
+
+    #weather {
+      color: white;
+      box-sizing: border-box;
+      width: 25%;
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://raw.githubusercontent.com/gasb150/game_style/feature-v2/app/assets/images/minecraft-529464_1280.jpg");
+      background-color: #f46326;
+    }
+
+    #cityName {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+
+    .icons {
+      display: flex;
+      padding-top: 30%;
+      margin-left: 10%;
+
+      #cloud .w-icon {
+        font-size: 10rem;
+      }
+
+      #temp {
+        position: relative;
+        right: 2.5rem;
+        bottom: 1rem;
+        font-size: 2rem;
+      }
+
+      #humidity {
+        position: relative;
+        right: 6rem;
+        bottom: -8rem;
+
+        div {
+          font-size: 2rem;
+          display: flex;
+
+          p {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 .hide {
   display: none;
 }
 
 @media only screen and (max-width: 968px) {
+  .main_page .most_voted .icons {
+    #cloud .w-icon {
+      font-size: 6rem;
+    }
+
+    #temp {
+      position: relative;
+      right: 2.5rem;
+      bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    #humidity {
+      position: relative;
+      right: 3rem;
+      bottom: -6rem;
+
+      div {
+        font-size: 1.5rem;
+        display: flex;
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
   .articles_cat_grid {
     grid-template-columns: repeat(1, 1fr);
 
@@ -168,23 +247,6 @@ $primary-color-attenuated: #736e69;
 }
 
 @media only screen and (max-width: 723px) {
-  .main_page {
-    grid-template-rows: none;
-
-    .background {
-      min-height: 400px;
-    }
-  }
-
-  .category_grid {
-    grid-template-columns: repeat(1, 1fr);
-
-    .article_image {
-      width: auto;
-      height: 50vw;
-    }
-  }
-
   .articles_cat_grid {
     .article {
       display: grid;
@@ -206,6 +268,58 @@ $primary-color-attenuated: #736e69;
       .image_article img {
         left: -19px;
       }
+    }
+  }
+
+  .main_page {
+    grid-template-rows: none;
+
+    .background {
+      min-height: 400px;
+    }
+
+    .most_voted {
+      #cityName {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+      }
+
+      .icons {
+        flex-direction: column;
+        padding-top: 5%;
+        margin-left: 10%;
+
+        #cloud .w-icon {
+          font-size: 2rem;
+        }
+
+        #temp {
+          position: initial;
+          font-size: 1rem;
+        }
+
+        #humidity {
+          position: initial;
+
+          div {
+            font-size: 1rem;
+            display: flex;
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .category_grid {
+    grid-template-columns: repeat(1, 1fr);
+
+    .article_image {
+      width: auto;
+      height: 50vw;
     }
   }
 }

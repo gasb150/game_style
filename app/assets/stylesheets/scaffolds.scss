@@ -154,6 +154,10 @@ footer {
 }
 
 @media only screen and (max-width: 968px) {
+  h2 {
+    font-size: 12px;
+  }
+
   .nav {
     .categories {
       display: grid;
@@ -165,6 +169,8 @@ footer {
 
 @media only screen and (max-width: 723px) {
   .footer {
+    height: 30vw;
+    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -184,5 +190,9 @@ footer {
       height: 15vw;
       max-height: none;
     }
+  }
+
+  .footer {
+    height: 60vw;
   }
 }

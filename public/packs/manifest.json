@@ -1,14 +1,64 @@
 {
-  "application.js": "/packs/js/application-b6d906567cbd55303c51.js",
-  "application.js.map": "/packs/js/application-b6d906567cbd55303c51.js.map",
+  "apiLocation.js": "/packs/js/apiLocation-c510cc49aec12b2aa1d3.js",
+  "apiLocation.js.map": "/packs/js/apiLocation-c510cc49aec12b2aa1d3.js.map",
+  "apiWeather.js": "/packs/js/apiWeather-b7897f0a85670302013d.js",
+  "apiWeather.js.map": "/packs/js/apiWeather-b7897f0a85670302013d.js.map",
+  "application.js": "/packs/js/application-1f83533a525c541b086f.js",
+  "application.js.map": "/packs/js/application-1f83533a525c541b086f.js.map",
+  "carrusel.js": "/packs/js/carrusel-d398dbc63b3dc596d488.js",
+  "carrusel.js.map": "/packs/js/carrusel-d398dbc63b3dc596d488.js.map",
   "entrypoints": {
-    "application": {
+    "apiLocation": {
       "js": [
-        "/packs/js/application-b6d906567cbd55303c51.js"
+        "/packs/js/apiLocation-c510cc49aec12b2aa1d3.js"
       ],
       "js.map": [
-        "/packs/js/application-b6d906567cbd55303c51.js.map"
+        "/packs/js/apiLocation-c510cc49aec12b2aa1d3.js.map"
+      ]
+    },
+    "apiWeather": {
+      "js": [
+        "/packs/js/apiWeather-b7897f0a85670302013d.js"
+      ],
+      "js.map": [
+        "/packs/js/apiWeather-b7897f0a85670302013d.js.map"
+      ]
+    },
+    "application": {
+      "js": [
+        "/packs/js/application-1f83533a525c541b086f.js"
+      ],
+      "js.map": [
+        "/packs/js/application-1f83533a525c541b086f.js.map"
+      ]
+    },
+    "carrusel": {
+      "js": [
+        "/packs/js/carrusel-d398dbc63b3dc596d488.js"
+      ],
+      "js.map": [
+        "/packs/js/carrusel-d398dbc63b3dc596d488.js.map"
+      ]
+    },
+    "icons": {
+      "js": [
+        "/packs/js/icons-891488e1140ed15b0b4e.js"
+      ],
+      "js.map": [
+        "/packs/js/icons-891488e1140ed15b0b4e.js.map"
+      ]
+    },
+    "weather": {
+      "js": [
+        "/packs/js/weather-563767f0914b0d4ce1e3.js"
+      ],
+      "js.map": [
+        "/packs/js/weather-563767f0914b0d4ce1e3.js.map"
       ]
     }
-  }
+  },
+  "icons.js": "/packs/js/icons-891488e1140ed15b0b4e.js",
+  "icons.js.map": "/packs/js/icons-891488e1140ed15b0b4e.js.map",
+  "weather.js": "/packs/js/weather-563767f0914b0d4ce1e3.js",
+  "weather.js.map": "/packs/js/weather-563767f0914b0d4ce1e3.js.map"
 }
