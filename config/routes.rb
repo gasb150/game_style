@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :proyects
+  resources :social_media
   get 'users', to: 'categories#index'
   get 'users/sing_up', to: 'users#new'
   devise_for :users
